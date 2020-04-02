@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Муштавинский](https://up.htmlacademy.ru/adaptive/19/user/1245817).
-* Наставник: `Неизвестно`.
+* Наставник: Алина Шаймиева.
 
 ---
 

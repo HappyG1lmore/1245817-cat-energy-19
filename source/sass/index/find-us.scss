@@ -1,0 +1,28 @@
+
+.find-us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.find-us__wrapper{
+  display: flex;
+  align-items: center;
+  width: 280px;
+
+}
+.find-us__invite{
+  padding-bottom: 25px;
+  padding-top: 25px;
+  @include title-small;
+  line-height: 20px;
+
+}
+.find-us__adress{
+  padding-bottom: 25px;
+  padding-top: 25px;
+  font-family: $font-two;
+  @include text-all;
+  line-height: 20px;
+  font-style: normal;
+}

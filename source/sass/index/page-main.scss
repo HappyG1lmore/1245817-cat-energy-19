@@ -1,0 +1,18 @@
+.page-main {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+.page-main a {
+  color:black;
+}
+.page-main__wrapper {
+  width: 280px;
+}
+
+

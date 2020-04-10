@@ -1,0 +1,27 @@
+.type-feed__title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+.type-feed__text {
+  font-family: $font-two;
+  @include text-all;
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+.type-feed__link-catalog {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+.type-feed__los-weight,
+.type-feed__mass-gain {
+  background-color: $color-back;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 20px;
+}

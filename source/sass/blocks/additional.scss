@@ -1,0 +1,44 @@
+.additional__title {
+  @include title-middle;
+  line-height: 24px;
+}
+
+.additional ul {
+  list-style: none;
+}
+
+.additional-item__title {
+  @include title-small;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional-item__info {
+  @include text-all;
+  line-height: 14px;
+  font-family: $font-two;
+}
+
+.additional__button {
+  color: white;
+}
+
+.additional__banner {
+  @include text-all;
+  line-height: 20px;
+  font-family: $font-two;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 280px;
+  height: 289px;
+  color: white;
+  background-image: url("/img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+    span {
+      display: flex;
+      text-align: center;
+      width: 50%;
+    }
+}

@@ -361,6 +361,9 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.bg-gray {
+  background-color: #eeeeee; }
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,8 +543,7 @@ a {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px; }
+          align-items: center; }
 
 .find-us__wrapper {
   display: -webkit-box;
@@ -636,9 +638,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.page-main a {
-  color: black; }
-
 .page-main__wrapper {
   width: 280px; }
 
@@ -714,5 +713,54 @@ a {
 .product-list__more a {
   color: black;
   background-color: #eeeeee; }
+
+.additional__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px; }
+
+.additional ul {
+  list-style: none; }
+
+.additional-item__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase; }
+
+.additional-item__info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  font-family: "Arial", sans-serif; }
+
+.additional__button {
+  color: white; }
+
+.additional__banner {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 280px;
+  height: 289px;
+  color: white;
+  background-image: url("/img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat; }
+  .additional__banner span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    width: 50%; }
 
 /*# sourceMappingURL=style.css.map */

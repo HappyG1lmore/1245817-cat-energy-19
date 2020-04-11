@@ -6,21 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Форма для заполнения магазина - Cat energy</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <img src="img/svg/logo-mobile.svg" width="33" height="38"
-          alt="логотип картинка интернет-магазина Кот энерджи" />
-      </a>
-      <a class="page-header__logo-text">
-        <img class="page-header__logo-text" src="img/svg/logo-mobile-header.svg.svg" width="110" height="18"
-          alt="логотип название интернет-магазина Кот энерджи" />
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__close" type="button">Закрыть</button>
+      <div class="page-header-top">
+        <a class="page-header__logo">
+          <img src="img/svg/logo-mobile.svg" width="195" height="38"
+            alt="логотип картинка интернет-магазина Кот энерджи" />
+        </a>
+        <button class="main-nav__button" type="button">Меню</button>
+      </div>
+      <nav class="main-nav visuallyhidden">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a href="index.html">Главная</a>
@@ -30,6 +29,8 @@
           </li>
           <li class="site-list__item">
             <a href="#">Подбор программы</a>
+          </li>
+          <li class="site-list__item">
           </li>
         </ul>
       </nav>
@@ -155,32 +156,29 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
         <a class="page-footer__logo-text">
-          <img src="img/svg/logo-mobile-header.svg.svg" width="110" height="18"
-            alt="логотип интернет-магазина Кот энерджи" />
+          <img src="img/svg/logo-footer.svg" width="110" height="18" alt="логотип интернет-магазина Кот энерджи" />
         </a>
       </div>
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vk" aria-label="ссылка на социальную сеть Вконтакте" href="#"><img
-              alt="Логотип социальной сети Вконтакте" height="12" src="img/svg/vk-icon.svg" width="22"></a></li>
+              alt="Логотип социальной сети Вконтакте" height="12" src="img/svg/icon-vk.svg" width="22"></a></li>
         <li class="social__item">
           <a class="social__link social__link--insta" aria-label="ссылка на социальную сеть Инстаграм" href="#"><img
-              alt="Логотип социальной сети Инстаграм" height="16" src="img/svg/insta-icon.svg" width="16"></a>
+              alt="Логотип социальной сети Инстаграм" height="16" src="img/svg/icon-insta.svg" width="16"></a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--fb" aria-label="ссылка на социальную сеть Фейсбук" href="#"><img
-              alt="Логотип социальной сети Фейсбук" height="19" src="img/svg/fb-icon.svg" width="10" /></a>
+              alt="Логотип социальной сети Фейсбук" height="19" src="img/svg/icon-fb.svg" width="10" /></a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
         <div class="copyright__text">
           HTML Academy
         </div>
-        <div class="copyright__logo">
-          <a class="copyright__link--logo">
-            <img alt="Логотип HTML академии" src="img/svg/htmlacademy.svg" height="34" width="27" />
-          </a>
-        </div>
+        <a href="#" class="copyright__logo">
+          <img alt="Логотип HTML академии" src="img/svg/htmlacademy.svg" height="34" width="27" />
+        </a>
       </div>
     </div>
   </footer>

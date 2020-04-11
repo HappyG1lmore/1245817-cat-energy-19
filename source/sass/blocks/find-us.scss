@@ -1,28 +1,29 @@
 
-.find-us{
+.find-us {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
 }
-.find-us__wrapper{
+
+.find-us__wrapper {
   display: flex;
   align-items: center;
   width: 280px;
-
 }
-.find-us__invite{
+
+.find-us__invite {
+  @include title-small;
   padding-bottom: 25px;
   padding-top: 25px;
-  @include title-small;
-  line-height: 20px;
-
+    line-height: 20px;
 }
-.find-us__adress{
+
+.find-us__adress {
+  @include text-all;
   padding-bottom: 25px;
   padding-top: 25px;
   font-family: $font-two;
-  @include text-all;
   line-height: 20px;
   font-style: normal;
 }

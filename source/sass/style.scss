@@ -2,14 +2,17 @@
   font-size: 36px;
   font-weight: 400;
 }
+
 @mixin title-middle {
   font-size: 24px;
   font-weight: 400;
 }
+
 @mixin title-small {
   font-size: 16px;
   font-weight: 400;
 }
+
 @mixin text-all {
   font-size: 14px;
   font-weight: 400;
@@ -26,23 +29,20 @@ $font-two: "Arial", sans-serif;
 /*
  basic - Основные
  */
-@import "basic/body.scss";
-@import "basic/container.scss";
-@import "basic/content.scss";
-@import "basic/visuallyhidden.scss";
+@import "normalize.scss";
+@import "visuallyhidden.scss";
+@import "blocks/body.scss";
+@import "blocks/container.scss";
 /*
  Index - главная страница
  */
-@import "index/page-header.scss";
-@import "index/advantages.scss";
-@import "index/banner.scss";
-@import "index/copyright.scss";
-@import "index/exemplar.scss";
-@import "index/find-us.scss";
-@import "index/main-nav.scss";
-@import "index/page-footer.scss";
-@import "index/page-main.scss";
-@import "index/result.scss";
-@import "index/social.scss";
-@import "index/site-list.scss";
-@import "index/type-feed.scss";
+@import "blocks/page-header.scss";
+@import "blocks/advantages.scss";
+@import "blocks/banner.scss";
+@import "blocks/exemplar.scss";
+@import "blocks/find-us.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-main.scss";
+@import "blocks/type-feed.scss";
+@import "blocks/product-list.scss";
+

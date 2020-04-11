@@ -10,9 +10,11 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
 }
+
 *,
 *::before,
 *::after {
@@ -23,7 +25,7 @@ a {
   width: 280px;
   height: 40px;
   color: white;
-  background-color:$color-main;
+  background-color: $color-main;
   text-transform: uppercase;
   display: flex;
   align-items: center;

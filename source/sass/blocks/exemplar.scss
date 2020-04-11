@@ -7,6 +7,7 @@
   margin-left: auto;
   justify-content: center;
 }
+
 .exemplar__wrapper {
   width: 280px;
 }
@@ -18,21 +19,25 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
 .exemplar__info {
   @include text-all;
   font-family: $font-two;
   padding-bottom: 25px;
 }
+
 .result__title {
   @include title-middle;
   margin: 0;
   padding-bottom: 15px;
 }
+
 .result__info {
   @include text-all;
   font-size: 12px;
   line-height: 12px;
 }
+
 .exemplar__result {
   display: flex;
   justify-content: space-between;
@@ -44,12 +49,14 @@
   flex-direction: column;
   align-items: center;
 }
+
 .exemplar__expenses {
   @include text-all;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
 }
+
 .exemplar__after {
   display: flex;
   justify-content: space-around;

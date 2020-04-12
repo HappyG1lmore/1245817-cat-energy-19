@@ -1,0 +1,28 @@
+.page-main {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+
+}
+
+.page-main__wrapper {
+  width: 280px;
+}
+
+.page-main__background {
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.page-main__title {
+  @include title-top;
+  line-height: 60px;
+}
+
+.page-main__product-list {
+  list-style: none;
+}

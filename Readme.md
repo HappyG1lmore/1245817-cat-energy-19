@@ -1,60 +1,80 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+editorconfig-cli
+================
 
-* Студент: [Андрей Муштавинский](https://up.htmlacademy.ru/adaptive/19/user/1245817).
-* Наставник: Алина Шаймиева.
+Simple command line interface (CLI) for [.editorconfig](http://editorconfig.org) based on the node-lintspaces module. 
+Uses `.editorconfig` by default from current directory. To change default location use `-e` argument.
+Supports [GLOB format](https://github.com/isaacs/node-glob).
 
----
-
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
-
-Полезный файл:
-
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
-
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
-
----
-
-### Памятка
-
-#### 1. Зарегистрируйтесь на Гитхабе
-
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/1245817-cat-energy-19) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808133-3a7ace00-a190-11e9-9d29-401b02036a9c.jpg">
-
-Получится вот так:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808135-3a7ace00-a190-11e9-9a8d-7390b3784c65.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808136-3a7ace00-a190-11e9-884f-24621e62b29a.jpg">
-
-Клонировать репозиторий можно так:
-
+## Install
 ```
-git clone SSH-адрес_вашего_форка
+$ npm install -g @htmlacademy/editorconfig-cli
 ```
 
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
 
-#### 4. Начинайте обучение!
+## Help
+```
+zeckson@mac ~/d/editorconfig-cli (master)> editorconfig-cli --help                                                                                  19:20:07
 
----
+  Usage: editorconfig-cli [options] <file ... or 'glob'>
 
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
+  Options:
 
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 2](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
+    -h, --help                              output usage information
+    -e, --editorconfig <file>               pass .editorconfig (by default it will look in './.editorconfig')
+    -i, --ignores <profile-name or regexp>  ignoring profiles. Like ('js-comments'|'java-comments'|'xml-comments'|'html-comments'|...). Defaults are 'js-comments'|'html-comments'
+    -j, --json <file>                       load GLOBs from JSON file. If no input passed, then it tries to find array in package.json
+    -x, --exclude <regexp>                  exclude files by pattern. Default 'normalize.*'
+    -v, --verbose                           verbose output
 
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/1245817-cat-energy-19.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/1245817-cat-energy-19
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/1245817-cat-energy-19/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/1245817-cat-energy-19?type=dev
+```
+
+## Example Commands
+
+Check all JavaScript files recursively, using `./.editorconfig` as settings:
+
+```
+editorconfig-cli **/*.js
+```
+
+The same as above but with [GLOB format](https://github.com/isaacs/node-glob):
+
+```
+editorconfig-cli '**/*.js'
+```
+
+Load GLOBs from `package.json` and exclude `normalize.*` by default:
+```
+editorconfig-cli
+```
+
+Format of JSON with GLOBs:
+```json
+glob.json
+{
+  "editorconfig-cli": [
+                          "./*.html",
+                          "./*.json",
+                          "./img/**/*.svg",
+                          "./js/**/*.js",
+                          "./less/**/*.less",
+                          "./sass/**/*.{sass,scss}",
+                          "./postcss/**/*.{css,pcss}"
+                        ]
+}
+```
+
+Pass `glob.json` to CLI:
+```
+editorconfig-cli -j glob.json
+```
+
+## Ignores
+lintspaces supports [built-in ignores](https://github.com/schorfES/node-lintspaces#ignores-option).
+
+Using built in ignores can be done like so:
+
+```
+editorconfig-cli -i 'js-comments' -i 'c-comments'
+```
+
+If parameters are omitted, then `js-comments` and `html-comments` are used. 

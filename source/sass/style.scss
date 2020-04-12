@@ -1,0 +1,48 @@
+@mixin title-top {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+@mixin title-middle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@mixin title-small {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin text-all {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+$green: #68b738;
+$gray: #eeeeee;
+$color-main: $green;
+$color-back: $gray;
+
+$font-one: "Oswald", "Arial", sans-serif;
+$font-two: "Arial", sans-serif;
+
+/*
+ basic - Основные
+ */
+@import "normalize.scss";
+@import "visuallyhidden.scss";
+@import "blocks/body.scss";
+@import "blocks/container.scss";
+/*
+ Index - главная страница
+ */
+@import "blocks/page-header.scss";
+@import "blocks/advantages.scss";
+@import "blocks/banner.scss";
+@import "blocks/exemplar.scss";
+@import "blocks/find-us.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-main.scss";
+@import "blocks/type-feed.scss";
+@import "blocks/product-list.scss";
+@import "blocks/additional.scss";

@@ -8,30 +8,19 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="css/style.css" rel="stylesheet">
   </head>
-
 
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img src="img/svg/logo-mobile.svg"
-            width="33"
-            height="38"
-            alt="логотип картинка интернет-магазина Кот энерджи"
-          />
-        </a>
-        <a class="page-header__logo-text">
-          <img
-            class="page-header__logo-text"
-            src="img/svg/logo-mobile-header.svg.svg"
-            width="110"
-            height="18"
-            alt="логотип название интернет-магазина Кот энерджи"
-          />
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__close" type="button">Закрыть</button>
+        <div class="page-header-top">
+          <a class="page-header__logo">
+            <img src="img/svg/logo-mobile.svg" width="195" height="38" alt="логотип картинка интернет-магазина Кот энерджи"/>
+          </a>
+          <button class="main-nav__button" type="button">Меню</button>
+        </div>
+        <nav class="main-nav visuallyhidden">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a href="index.html">Главная</a>
@@ -51,7 +40,7 @@
       <div class="page-main__wrapper">
         <h2 class="page-main__title">Каталог продукции</h2>
         <ul class="page-main__product-list product-list">
-          <li class="product-list__item">
+          <li class="product-list__item product-item">
             <div class="product-list__img">
               <img src="img/catalog-1-mobile.jpg" alt="фотография корма" height="144" width="140"/>
             </div>
@@ -77,7 +66,7 @@
             </div>
             <a class="product-item__button button" href="#">Заказать</a>
           </li>
-          <li class="product-list__item">
+          <li class="product-list__item product-item">
             <div class="product-list__img">
               <img src="img/catalog-2-mobile.jpg" alt="фотография корма" height="144" width="140"/>
             </div>
@@ -247,41 +236,41 @@
         </ul>
         <section class="additional">
           <h2 class="additional__title">Дополнительные товары</h2>
-          <ul class="additional__list>">
-            <li class="additional__item additional-item">
+          <ul class="additional__item>">
+            <li class="additional-item">
               <h3 class="additional-item__title">Сахарозаменитель</h3>
               <table>
-                <tr>
+                <tr class="additional-item__info">
                   <td>1 упаковка (100 г)</td>
                   <td>200 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
             </li>
-            <li class="additional__item additional-item">
+            <li class="additional-item">
               <h3 class="additional-item__title">Питьевая вода</h3>
               <table>
-                <tr>
+                <tr class="additional-item__info">
                   <td>5 литров</td>
                   <td>50 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
             </li>
-            <li class="additional__item additional-item">
+            <li class="additional-item">
               <h3 class="additional-item__title">Молоко</h3>
               <table>
-                <tr>
+                <tr class="additional-item__info">
                   <td>1 литр</td>
                   <td>100 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
             </li>
-            <li class="additional__item additional-item">
+            <li class="additional-item">
               <h3 class="additional-item__title">Витамины</h3>
               <table>
-                <tr>
+                <tr class="additional-item__info">
                   <td>1 упаковка (30 г)</td>
                   <td>300 Р</td>
                 </tr>
@@ -290,63 +279,61 @@
             </li>
           </ul>
           <div class="additional__banner">
-            Закажите все и получите чехол для кота в подарок!
+            <span>Закажите все и получите чехол для кота в подарок!</span>
           </div>
         </section>
       </div>
-      <section class="find-us">
-        <h2 class="visuallyhidden">Как нас найти</h2>
-        <div class="find-us__invite">
-          приглашаем
-          к сотрудничеству
-          дилеров!
+      <section class="find-us bg-gray">
+        <div class="find-us__wrapper">
+          <h2 class="visuallyhidden">Как нас найти</h2>
+          <!--стоит ли брать текст и адрес (т.е. эти два блока) еще в один див? ИЛи по раздельности не будет проблем их размещать-->
+          <div class="find-us__invite">
+            приглашаем
+            к сотрудничеству
+            дилеров!
+          </div>
+          <address class="find-us__adress">
+            ул. Большая Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
         </div>
-         <address class="find-us__adress">
-          ул. Большая Конюшенная, д. 19/8
-          Санкт-Петербург
-         </address>
-         <div class="find-us__map">
-           <!--оставлю просто картинку, пока хоть немного не понял адаптивность. Меньше переделывать придется)-->
-          <img class="exemplar__picture" src="https://via.placeholder.com/150x150" alt="карта с указанным адресом, где можно найти магазин"/>
-         </div>
-       </section>
+        <div class="find-us__map">
+          <!--оставлю просто картинку, пока хоть немного не понял адаптивность. Меньше переделывать придется)-->
+          <img class="exemplar__picture" src="img/bg-map-mobile@1x.png"
+            alt="карта с указанным адресом, где можно найти магазин" width="320" height="333" />
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-      <div class="page-footer__logo">
-      <a class="page-footer__logo-text">
-        <img src="img/svg/logo-mobile-header.svg.svg"
-          width="110"
-          height="18"
-          alt="логотип интернет-магазина Кот энерджи"
-        />
-      </a>
-    </div>
-    <ul class="page-footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" aria-label="ссылка на социальную сеть Вконтакте" href="#"><img alt="Логотип социальной сети Вконтакте"
-        height="12" src="img/svg/vk-icon.svg" width="22" ></a></li>
-      <li class="social__item">
-        <a class="social__link social__link--insta" aria-label="ссылка на социальную сеть Инстаграм" href="#"><img alt="Логотип социальной сети Инстаграм"
-          height="16" src="img/svg/insta-icon.svg" width="16" ></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--fb" aria-label="ссылка на социальную сеть Фейсбук" href="#"><img alt="Логотип социальной сети Фейсбук"
-          height="19" src="img/svg/fb-icon.svg" width="10"/></a>
-      </li>
-    </ul>
-    <div class="page-footer__copyright copyright">
-      <div class="copyright__text">
-        HTML Academy
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-text">
+            <img src="img/svg/logo-footer.svg" width="110" height="18" alt="логотип интернет-магазина Кот энерджи" />
+          </a>
+        </div>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" aria-label="ссылка на социальную сеть Вконтакте" href="#"><img
+                alt="Логотип социальной сети Вконтакте" height="12" src="img/svg/icon-vk.svg" width="22"></a></li>
+          <li class="social__item">
+            <a class="social__link social__link--insta" aria-label="ссылка на социальную сеть Инстаграм" href="#"><img
+                alt="Логотип социальной сети Инстаграм" height="16" src="img/svg/icon-insta.svg" width="16"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" aria-label="ссылка на социальную сеть Фейсбук" href="#"><img
+                alt="Логотип социальной сети Фейсбук" height="19" src="img/svg/icon-fb.svg" width="10" /></a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <div class="copyright__text">
+            HTML Academy
+          </div>
+          <a href="#" class="copyright__logo">
+            <img alt="Логотип HTML академии" src="img/svg/htmlacademy.svg" height="34" width="27" />
+          </a>
+        </div>
       </div>
-      <div class="copyright__logo">
-        <a class="copyright__link--logo">
-          <img alt="Логотип HTML академии" src="img/svg/htmlacademy.svg" height="34" width="27"/>
-        </a>
-      </div>
-    </div>
-    </div>
     </footer>
 
 

@@ -1,0 +1,29 @@
+.page-header a {
+  color: black;
+}
+
+.page-header ul {
+  list-style-type: none;
+}
+
+.page-header {
+  width: 320px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.page-header__wrapper {
+  display: flex;
+  width: 280px;
+}
+
+.page-header-top {
+  display: flex;
+  width: 100%;
+}
+
+.main-nav__button {
+  margin-left: auto;
+}

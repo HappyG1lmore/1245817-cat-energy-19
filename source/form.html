@@ -47,7 +47,7 @@
       <form class="program__form form" action="https://echo.htmlacademy.ru" method="post">
         <!--очень не уверен как правильно сделать форму. Делаю fieldset и прячу Legend. Но я не знаю нужны ли они и вообще fieldset и правильно ли вот так прятать Legend. МОжет быть проще Дивы?-->
 
-        <fieldset class="form__data data">
+        <div class="form__data data">
           <legend class="visuallyhidden">Анкетные данные:</legend>
           <ul class="data__list">
             <li class="data__item">
@@ -63,10 +63,10 @@
               <input class="data__field" id="age" name="age" placeholder="7" type="number" />
             </li>
           </ul>
-        </fieldset>
+        </div>
 
         <!--Может быть есть смысл давать названия классам по типу формы? Там например Нижнему дать Программ__Радио, ну или что-то такое? или все же по сути инфы именно лучше?-->
-        <fieldset class="form__options options">
+        <div class="form__options options">
           <legend class="visuallyhidden">Выбор программы:</legend>
           <ul class="options__list">
             <li class="options__item">
@@ -82,9 +82,9 @@
               <input class="options__input" id="advice" name="options" type="radio" value="advice">
             </li>
           </ul>
-        </fieldset>
+        </div>
 
-        <fieldset class="form__owner-data owner-data">
+        <div class="form__owner-data owner-data">
           <legend class="owner-data__legend">Контактные данные (владельца кота):</legend>
           <ul class="owner-data__list">
             <li class="owner-data__item">
@@ -97,15 +97,15 @@
                 type="tel" />
             </li>
           </ul>
-        </fieldset>
+        </div>
 
-        <fieldset class="form__comment comment">
+        <div class="form__comment comment">
           <legend class="comment__legend">Комментарий:</legend>
           <textarea class="comment__text" id="comment" name="comment-text"
             placeholder="Расскажите обо всех повадках кота" rows="5" cols="65"></textarea>
-        </fieldset>
+        </div>
 
-        <fieldset class="form__extra extra">
+        <div class="form__extra extra">
           <legend class="extra__legend">Дополнительно:</legend>
           <ul class="extra__list">
             <li class="extra__item">
@@ -125,29 +125,31 @@
               <input class="extra__input" id="vitamins" name="extra" type="checkbox" value="vitamins">
             </li>
           </ul>
-        </fieldset>
+        </div>
         <button class="form__button button" type="submit">
           Отправить заявку
         </button>
-        <span>* — Обязательные поля</span>
+        <span class="form__discription">* — Обязательные поля</span>
       </form>
     </section>
 
-    <section class="find-us">
-      <h2 class="visuallyhidden">Как нас найти</h2>
-      <div class="find-us__invite">
-        приглашаем
-        к сотрудничеству
-        дилеров!
+    <section class="find-us bg-gray">
+      <div class="find-us__wrapper">
+        <h2 class="visuallyhidden">Как нас найти</h2>
+        <!--стоит ли брать текст и адрес (т.е. эти два блока) еще в один див? ИЛи по раздельности не будет проблем их размещать-->
+        <div class="find-us__invite">
+          приглашаем
+          к сотрудничеству
+          дилеров!
+        </div>
+        <address class="find-us__adress">
+          ул. Большая Конюшенная, д. 19/8
+          Санкт-Петербург
+        </address>
       </div>
-      <address class="find-us__adress">
-        ул. Большая Конюшенная, д. 19/8
-        Санкт-Петербург
-      </address>
       <div class="find-us__map">
-        <!--оставлю просто картинку, пока хоть немного не понял адаптивность. Меньше переделывать придется)-->
-        <img class="exemplar__picture" src="https://via.placeholder.com/150x150"
-          alt="карта с указанным адресом, где можно найти магазин" />
+        <img class="exemplar__picture" src="img/bg-map-mobile@1x.png"
+          alt="карта с указанным адресом, где можно найти магазин" width="320" height="333" />
       </div>
     </section>
   </main>

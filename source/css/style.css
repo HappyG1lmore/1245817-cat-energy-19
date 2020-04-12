@@ -763,4 +763,44 @@ a {
     text-align: center;
     width: 50%; }
 
+.program ul {
+  list-style: none; }
+
+.program__title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px; }
+
+.program__info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+.program__form {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase; }
+  .program__form input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase; }
+
+.extra__legend,
+.comment__legend,
+.owner-data__legend {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: none; }
+
+.form__button {
+  border: none; }
+
+.form__discription {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none; }
+
 /*# sourceMappingURL=style.css.map */

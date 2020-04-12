@@ -1,0 +1,26 @@
+.program__form{
+  @include title-small;
+  line-height: 18px;
+  text-transform: uppercase;
+  input {
+    @include title-small;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.extra__legend,
+.comment__legend,
+.owner-data__legend {
+  @include title-middle;
+  text-transform: none;
+}
+
+.form__button {
+  border: none;
+}
+
+.form__discription{
+  @include text-all;
+  text-transform: none;
+}

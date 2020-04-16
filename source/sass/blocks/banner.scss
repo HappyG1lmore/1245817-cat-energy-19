@@ -17,8 +17,75 @@
 
 .banner {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 480px;
 }
 
 .banner__picture {
   text-align: center;
 }
+
+.banner__buttom {
+  text-align: center;
+  width: 280px;
+}
+.banner__button-wrap {
+  margin: 0;
+  width: 280px;
+  a {
+    color: white;
+  }
+}
+
+.banner__button-wrap {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .banner {
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .banner__title {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .banner__text {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .banner__button-wrap{
+    left: 0;
+    top: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner {
+    width: 1330px;
+  }
+
+  .banner::after {
+    content: "";
+    background-image: url("/img/index-background-desktop@1x.jpg");
+    background-repeat: none;
+    background-size: contain;
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    right: 0px;
+    top: -90px;
+    z-index: -2;
+  }
+}
+

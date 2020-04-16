@@ -1,4 +1,5 @@
 .page-main__product-list {
+  @include list-reset;
 
   a {
     @include title-small;
@@ -37,5 +38,135 @@
   a {
     color: black;
     background-color: $gray;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 165px;
+  }
+
+  .product-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 324px;
+    height: 433px;
+    background-color: $gray;
+    margin-bottom: 140px;
+    margin-right: 60px;
+  }
+
+  .product-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .product-list__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-bottom: 40px;
+
+    h3 {
+      font-size: 20px;
+      line-height: 20px;
+      display: inline-block;
+      width: 130px;
+      text-align: center;
+    }
+
+    table {
+       @include title-small;
+       line-height: 16px;
+       font-family: $font-two;
+
+       width: 100%;
+
+       td {
+         height: 33px;
+       }
+
+       td:nth-child(2n) {
+         text-align: right;
+       }
+
+       padding-bottom: 33px;
+    }
+  }
+
+  .product-item__button {
+    width: 100%;
+  }
+
+  .product-list__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+ }
+   .product-list__more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 324px;
+    height: 433px;
+    margin-right: 0;
+
+    justify-content: flex-end;
+
+    .product-list__wrapper {
+      align-items: center;
+    }
+
+    h3 {
+      display: inline-block;
+      width: 135px;
+      padding-bottom: 27px;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 16px;
+      font-family: $font-two;
+      display: inline-block;
+      width: 175px;
+      text-align: center;
+      padding-bottom: 86px;
+
+    }
+ }
+    .product-list__button--show-all {
+      width: 100%;
+    }
+}
+
+@media (min-width: $desktop-width) {
+  .product-list__item {
+    width: 245px;
+    height: 431px;
+    background-color: $gray;
+    margin-bottom: 140px;
+    margin-right: 80px;
+  }
+
+  .product-list__item:nth-child(2n) {
+    margin-right: 50;
+  }
+
+   .product-list__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    padding-bottom: 40px;
+
+    table {
+     padding-bottom: 33px;
+    }
   }
 }

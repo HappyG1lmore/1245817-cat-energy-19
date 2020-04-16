@@ -1,7 +1,8 @@
-.program__form{
+.program__form {
   @include title-small;
   line-height: 18px;
   text-transform: uppercase;
+
   input {
     @include title-small;
     line-height: 18px;
@@ -20,7 +21,7 @@
   border: none;
 }
 
-.form__discription{
+.form__discription {
   @include text-all;
   text-transform: none;
 }

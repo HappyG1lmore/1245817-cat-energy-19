@@ -1,10 +1,12 @@
 .program ul {
   list-style: none;
 }
+
 .program__title {
   @include title-top;
   line-height: 60px;
 }
+
 .program__info {
   @include text-all;
   line-height: 18px;

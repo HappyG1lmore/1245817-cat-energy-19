@@ -41,3 +41,30 @@
   align-items: center;
   padding-bottom: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+  width: 768px;
+  }
+
+  .page-footer__wrapper {
+    min-width: 708px;
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    min-width: 1440px;
+  }
+
+  .page-footer__wrapper {
+    width: 1220px;
+  }
+
+}

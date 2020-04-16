@@ -4,13 +4,15 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding-bottom: 25px;
 }
 
 .type-feed__text {
   @include text-all;
   font-family: $font-two;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0;
+  padding-bottom: 45px;
 }
 
 .type-feed__link-catalog {
@@ -18,13 +20,104 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  padding-left: 20px;
 }
 
-.type-feed__los-weight,
-.type-feed__mass-gain {
+.type-feed__item {
   background-color: $color-back;
   padding-bottom: 8px;
   padding-top: 8px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  height: 266px;
+}
+
+.type-feed__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 240px;
+  height: 205px;
+}
+
+@media (min-width: $tablet-width) {
+  .type-feed {
+    margin-bottom: 45px;
+  }
+
+  .type-feed__title {
+    @include title-top;
+    line-height: 37,02;
+  }
+
+  .type-feed__text {
+    @include title-small;
+    line-height: 24px;
+    font-family: $font-two;
+  }
+
+  .type-feed__link-catalog {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .type-feed__item {
+    height: 372px;
+    width: 708px;
+    justify-content: start;
+    align-items: center;
+   }
+
+  .type-feed__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 370px;
+    height: 230px;
+    margin-left: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .type-feed {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .type-feed__item--los-weight {
+    margin-right: 80px;
+  }
+
+  .type-feed__title {
+    @include title-top;
+    line-height: 37,02;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .type-feed__text {
+    @include title-small;
+    line-height: 24px;
+    font-family: $font-two;
+  }
+
+  .type-feed__link-catalog {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .type-feed__item {
+    height: 372px;
+    width: 708px;
+    justify-content: start;
+  }
+
+  .type-feed__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 470px;
+    height: 230px;
+    padding-left: 55px;
+  }
 }

@@ -42,9 +42,9 @@
   }
 
   .advanages__item {
+    @include title-small;
     width: 354px;
     height: 230px;
-    @include title-small;
     line-height: 24px;
     margin-bottom: 90px;
     padding: 0;
@@ -82,15 +82,13 @@
     padding-top: 120px;
     margin-right: 75px;
   }
+
   .advanages__item:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
-
-    .advanages__item--wrap {
-      display: block;
-      width: 198px;
-    }
+  .advanages__item--wrap {
+    display: block;
+    width: 198px;
   }
-
-
+}

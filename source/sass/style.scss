@@ -18,6 +18,13 @@
   font-weight: 400;
 }
 
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 $green: #68b738;
 $gray: #eeeeee;
 $color-main: $green;
@@ -26,10 +33,12 @@ $color-back: $gray;
 $font-one: "Oswald", "Arial", sans-serif;
 $font-two: "Arial", sans-serif;
 
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 /*
  basic - Основные
  */
-@import "normalize.scss";
 @import "visuallyhidden.scss";
 @import "blocks/body.scss";
 @import "blocks/container.scss";
@@ -48,3 +57,4 @@ $font-two: "Arial", sans-serif;
 @import "blocks/additional.scss";
 @import "blocks/program.scss";
 @import "blocks/form.scss";
+@import "blocks/main-nav.scss";

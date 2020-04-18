@@ -1,3 +1,9 @@
+.program {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
 .program ul {
   list-style: none;
 }
@@ -11,4 +17,22 @@
   @include text-all;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .program__title {
+    @include title-top-tab;
+    line-height: 60px;
+  }
+
+  .program {
+    width: 708px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    width: 1220px;
+  }
 }

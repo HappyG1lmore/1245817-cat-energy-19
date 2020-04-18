@@ -1,5 +1,5 @@
-
 .find-us {
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,8 +7,9 @@
 
 .find-us__wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 280px;
+  width: 320px;
 }
 
 .find-us__invite {
@@ -26,4 +27,71 @@
   font-family: $font-two;
   line-height: 20px;
   font-style: normal;
+}
+
+.find-us__info--wrap {
+  display: flex;
+  width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .find-us {
+    width: 768px;
+  }
+
+  .find-us__wrapper {
+    width: 708px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .find-us__info--wrap {
+    display: flex;
+    width: 625px;
+    margin: 0 auto;
+  }
+
+  .find-us__invite {
+    width: 155px;
+  }
+
+  .find-us__adress {
+    width: 155px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .find-us {
+    width: 1440px;
+  }
+
+  .find-us__wrapper {
+    width: 1220px;
+    position: relative;
+  }
+
+  .find-us__info {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    border: 1px solid black;
+    top: 100px;
+    left: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .find-us__info--wrap {
+    width: 405px;
+    height: 75px;
+  }
+
+  .find-us__invite {
+    padding: 0;
+  }
+
+  .find-us__adress {
+    padding: 0;
+  }
 }

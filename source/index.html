@@ -37,7 +37,6 @@
   </header>
 
   <main class="page-main">
-
     <div class="page-main__background">
       <div class="page-main__banner banner">
         <h1 class="banner__title">Функциональное <br>
@@ -107,6 +106,7 @@
 
     <section class="exemplar">
       <div class="exemplar__wrapper">
+        <div class="exemplar__info--wrap">
         <h2 class="exemplar__title">Живой пример</h2>
         <div class="exemplar__info">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
@@ -125,10 +125,14 @@
             </div>
           </div>
           <h3 class="exemplar__expenses">Затраты на питание: 15 000 руб</h3>
+        </div>
+      </div>
+          <div class="exemplar__picture--wrap">
           <img class="exemplar__picture" src="img/after-mobile@1x.png" alt="Пример кота каким он был и каким стал" />
           <div class="exemplar__after">
-            <span class="">Было</span>
-            <span class="">Стало</span>
+            <span class="exemplar__after--before">Было</span>
+            <span class="exemplar__after--after">Стало</span>
+          </div>
           </div>
         </div>
       </div>
@@ -136,8 +140,10 @@
 
     <section class="find-us">
       <div class="find-us__wrapper">
+      <div class="find-us__info">
         <h2 class="visuallyhidden">Как нас найти</h2>
-        <!--стоит ли брать текст и адрес (т.е. эти два блока) еще в один див? ИЛи по раздельности не будет проблем их размещать-->
+
+        <div class="find-us__info--wrap">
         <div class="find-us__invite">
           приглашаем
           к сотрудничеству
@@ -148,11 +154,13 @@
           Санкт-Петербург
         </address>
       </div>
+      </div>
       <div class="find-us__map">
-        <!--оставлю просто картинку, пока хоть немного не понял адаптивность. Меньше переделывать придется)-->
+
         <img class="exemplar__picture" src="img/bg-map-mobile@1x.png"
           alt="карта с указанным адресом, где можно найти магазин" width="320" height="333" />
       </div>
+    </div>
     </section>
   </main>
 

@@ -3,7 +3,17 @@
   font-weight: 400;
 }
 
+@mixin title-top-tab {
+  font-size: 60px;
+  font-weight: 400;
+}
+
 @mixin title-middle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@mixin title-middle-tab {
   font-size: 24px;
   font-weight: 400;
 }
@@ -13,8 +23,19 @@
   font-weight: 400;
 }
 
+@mixin title-small-tab {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
 @mixin text-all {
   font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin text-all-tab {
+  font-size: 16px;
   font-weight: 400;
 }
 

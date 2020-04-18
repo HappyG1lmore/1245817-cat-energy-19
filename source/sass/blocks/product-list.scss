@@ -37,12 +37,11 @@
 
   a {
     color: black;
-    background-color: $gray;
+    background-color: $color-back;
   }
 }
 
 @media (min-width: $tablet-width) {
-
   .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +65,11 @@
     margin-right: 0;
   }
 
+  .product-list__item:nth-last-child(1),
+  .product-list__item:nth-last-child(2) {
+    margin-bottom: 25px;
+  }
+  /* не понял как в скобках написать 1 и 2, чтобы одной строкой было. Через запятую не работает ч*/
   .product-list__wrapper {
     display: flex;
     flex-direction: column;
@@ -107,9 +111,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
   }
+
   .product-list__more {
     display: flex;
     flex-direction: column;
@@ -138,35 +141,43 @@
       width: 175px;
       text-align: center;
       padding-bottom: 86px;
-
     }
   }
-    .product-list__button--show-all {
-      width: 100%;
-    }
+
+  .product-list__button--show-all {
+    width: 100%;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .product-list__item {
     width: 245px;
     height: 431px;
-    background-color: $gray;
-    margin-bottom: 140px;
+
     margin-right: 80px;
   }
 
   .product-list__item:nth-child(2n) {
-    margin-right: 50;
+    margin-right: 80px;
+  }
+
+  .product-list__item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .product-list__item:nth-last-child(1),
+  .product-list__item:nth-last-child(2),
+  .product-list__item:nth-last-child(3),
+  .product-list__item:nth-last-child(4) {
+    margin-bottom: 25px;
   }
 
   .product-list__wrapper {
-    display: flex;
-    flex-direction: column;
     width: 170px;
     padding-bottom: 40px;
 
     table {
-    padding-bottom: 33px;
+      padding-bottom: 33px;
     }
   }
 }

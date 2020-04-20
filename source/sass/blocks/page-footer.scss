@@ -42,9 +42,15 @@
   padding-bottom: 25px;
 }
 
+.copyright__text {
+  @include title-small;
+  line-height: 16px;
+  font-family: $font-two;
+}
+
 @media (min-width: $tablet-width) {
   .page-footer {
-  width: 768px;
+    width: 768px;
   }
 
   .page-footer__wrapper {
@@ -66,5 +72,4 @@
   .page-footer__wrapper {
     width: 1220px;
   }
-
 }

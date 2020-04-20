@@ -33,9 +33,9 @@
 }
 
 .result__info {
-  @include text-all;
   font-size: 12px;
   line-height: 12px;
+  font-weight: 400;
 }
 
 .exemplar__result {
@@ -62,4 +62,136 @@
   justify-content: space-around;
   text-transform: uppercase;
   padding-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .exemplar {
+    width: 768px;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .exemplar::after {
+    content: "";
+    background-color: $color-back;
+
+    width: 100%;
+    height: 462px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .exemplar__wrapper {
+    width: 708px;
+  }
+
+  .exemplar__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .exemplar__info {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .result__title {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .result__info {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .exemplar__expenses {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    margin-left: auto;
+  }
+
+  .exemplar__result {
+    display: flex;
+    justify-content: flex-start;
+    width: 367px;
+  }
+
+  .result__weight {
+    padding-right: 90px;
+  }
+
+  .exemplar__total {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .exemplar__picture {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .exemplar__after {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .exemplar__after--after {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .exemplar {
+    width: 1440px;
+  }
+
+  .exemplar::after {
+
+    width: 100%;
+    height: 462px;
+  }
+
+  .exemplar__wrapper {
+    width: 1220px;
+    display: flex;
+    padding-bottom: 65px;
+  }
+
+  .exemplar__info--wrap {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exemplar__picture--wrap {
+    margin-left: auto;
+    width: 650px;
+  }
+
+  .exemplar__total {
+    margin-top: auto;
+    justify-content: flex-start;
+  }
+
+  .exemplar__expenses {
+    margin-left: 0;
+    margin-right: auto;
+    padding-top: 45px;
+  }
+
+  .exemplar__info {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .exemplar__title {
+    padding-bottom: 150px;
+  }
 }

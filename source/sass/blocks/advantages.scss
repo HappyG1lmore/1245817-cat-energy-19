@@ -42,9 +42,9 @@
   }
 
   .advanages__item {
+    @include title-small;
     width: 354px;
     height: 230px;
-    @include title-small;
     line-height: 24px;
     margin-bottom: 90px;
     padding: 0;
@@ -62,35 +62,17 @@
     padding-bottom: 90px;
   }
 
-  .advantages__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .advantages__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .advanages__item {
-    @include title-small;
     line-height: 24px;
     width: 245px;
     height: 245px;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
     padding: 0;
     padding-top: 120px;
     margin-right: 75px;
   }
+
   .advanages__item:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
-
-
-    .advanages__item--wrap {
-      display: block;
-      width: 198px;
-    }
-  }
-
-
+}

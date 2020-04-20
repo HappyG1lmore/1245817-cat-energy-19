@@ -13,30 +13,30 @@
   </head>
 
   <body>
-     <header class="page-header">
-        <div class="page-header__wrapper">
-          <div class="page-header-top">
-            <a class="page-header__logo-link">
-              <div class="page-header__logo"></div>
-            </a>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <div class="page-header-top">
+          <a class="page-header__logo-link">
+            <div class="page-header__logo"></div>
+          </a>
             <button class="main-nav__button" type="button">Меню</button>
-          </div>
-
-          <nav class="main-nav">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
-                <a href="index.html">Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="#">Каталог продукции</a>
-              </li>
-              <li class="site-list__item">
-                <a href="#">Подбор программы</a>
-              </li>
-            </ul>
-          </nav>
         </div>
-      </header>
+
+        <nav class="main-nav">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main class="page-main">
       <div class="page-main__wrapper">
@@ -242,7 +242,7 @@
             <a class="product-item__button button" href="#">Заказать</a>
           </div>
           </li>
-          <li class="product-list__more">
+          <li class="product-list__more product-list__item">
             <div class="product-list__wrapper">
             <h3>Показать еще 100500 товаров</h3>
             <span>На самом деле вкусов гораздо больше!</span>
@@ -252,73 +252,86 @@
           </li>
         </ul>
         <section class="additional">
+          <div class="additional__wrapper">
           <h2 class="additional__title">Дополнительные товары</h2>
-          <ul class="additional__item>">
+          <ul class="additional__item">
             <li class="additional-item">
+              <div class="additional-item__wrapper">
               <h3 class="additional-item__title">Сахарозаменитель</h3>
               <table>
                 <tr class="additional-item__info">
                   <td>1 упаковка (100 г)</td>
-                  <td>200 Р</td>
+                  <td class="additional-item__info--price">200 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
+            </div>
             </li>
             <li class="additional-item">
+              <div class="additional-item__wrapper">
               <h3 class="additional-item__title">Питьевая вода</h3>
               <table>
                 <tr class="additional-item__info">
                   <td>5 литров</td>
-                  <td>50 Р</td>
+                  <td class="additional-item__info--price">50 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
+            </div>
             </li>
             <li class="additional-item">
+              <div class="additional-item__wrapper">
               <h3 class="additional-item__title">Молоко</h3>
               <table>
                 <tr class="additional-item__info">
                   <td>1 литр</td>
-                  <td>100 Р</td>
+                  <td class="additional-item__info--price">100 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
+            </div>
             </li>
             <li class="additional-item">
+              <div class="additional-item__wrapper">
               <h3 class="additional-item__title">Витамины</h3>
               <table>
                 <tr class="additional-item__info">
                   <td>1 упаковка (30 г)</td>
-                  <td>300 Р</td>
+                  <td class="additional-item__info--price">300 Р</td>
                 </tr>
               </table>
               <a class="additional__button button" href="#">Заказать</a>
+              </div>
             </li>
           </ul>
           <div class="additional__banner">
-            <span>Закажите все и получите чехол для кота в подарок!</span>
+            <span>Закажите все и&nbsp;получите&nbsp;чехол для кота в подарок!</span>
           </div>
+        </div>
         </section>
       </div>
+
       <section class="find-us bg-gray">
-        <div class="find-us__wrapper">
-          <h2 class="visuallyhidden">Как нас найти</h2>
-          <!--стоит ли брать текст и адрес (т.е. эти два блока) еще в один див? ИЛи по раздельности не будет проблем их размещать-->
-          <div class="find-us__invite">
-            приглашаем
-            к сотрудничеству
-            дилеров!
-          </div>
-          <address class="find-us__adress">
-            ул. Большая Конюшенная, д. 19/8
-            Санкт-Петербург
-          </address>
+      <div class="find-us__wrapper">
+        <div class="find-us__info">
+        <h2 class="visuallyhidden">Как нас найти</h2>
+        <div class="find-us__info--wrap">
+        <div class="find-us__invite">
+          приглашаем
+          к сотрудничеству
+          дилеров!
         </div>
-        <div class="find-us__map">
-          <!--оставлю просто картинку, пока хоть немного не понял адаптивность. Меньше переделывать придется)-->
-          <img class="exemplar__picture" src="img/bg-map-mobile@1x.png"
-            alt="карта с указанным адресом, где можно найти магазин" width="320" height="333" />
-        </div>
+        <address class="find-us__adress">
+          ул. Большая Конюшенная, д. 19/8
+          Санкт-Петербург
+        </address>
+      </div>
+      </div>
+      <div class="find-us__map">
+        <img class="exemplar__picture" src="img/bg-map-mobile@1x.png"
+          alt="карта с указанным адресом, где можно найти магазин" width="320" height="333" />
+      </div>
+    </div>
       </section>
     </main>
 

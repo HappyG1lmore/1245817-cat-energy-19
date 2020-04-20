@@ -14,13 +14,13 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header-top">
-        <a class="page-header__logo">
-          <img src="img/svg/logo-mobile.svg" width="195" height="38"
-            alt="логотип картинка интернет-магазина Кот энерджи" />
+        <a class="page-header__logo-link">
+          <div class="page-header__logo"></div>
         </a>
         <button class="main-nav__button" type="button">Меню</button>
       </div>
-      <nav class="main-nav visuallyhidden">
+
+      <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a href="index.html">Главная</a>
@@ -31,8 +31,6 @@
           <li class="site-list__item">
             <a href="#">Подбор программы</a>
           </li>
-          <li class="site-list__item">
-          </li>
         </ul>
       </nav>
     </div>
@@ -41,103 +39,108 @@
   <main class="page-main">
     <section class="program">
       <h2 class="program__title">Подбор программы</h2>
+
+      <div class="program__wrapper">
       <p class="program__info">
         Заполните анкету и мы подберем
         программу питания для вашего кота
       </p>
+
       <form class="program__form form" action="https://echo.htmlacademy.ru" method="post">
-        <!--очень не уверен как правильно сделать форму. Делаю fieldset и прячу Legend. Но я не знаю нужны ли они и вообще fieldset и правильно ли вот так прятать Legend. МОжет быть проще Дивы?-->
 
         <div class="form__data data">
           <legend class="visuallyhidden">Анкетные данные:</legend>
-          <ul class="data__list">
+          <ul class="data__list form-list">
             <li class="data__item">
-              <label class="data__label" for="name">Имя:*</label>
-              <input class="data__field" id="name" name="name" placeholder="Барсик" type="text" />
+              <label class="data__label label" for="name">Имя:*</label>
+              <input class="data__field field" id="name" name="name" placeholder="Барсик" type="text" />
             </li>
             <li class="data__item">
-              <label class="data__label" for="weight">Вес(КГ):*</label>
-              <input class="data__field" id="weight" name="weight" placeholder="7" type="number" />
+              <label class="data__label label" for="weight">Вес(КГ):*</label>
+              <input class="data__field field" id="weight" name="weight" placeholder="7" type="number" />
             </li>
             <li class="data__item">
-              <label class="data__label" for="age">Возраст(ЛЕТ):</label>
-              <input class="data__field" id="age" name="age" placeholder="7" type="number" />
+              <label class="data__label label" for="age">Возраст(ЛЕТ):</label>
+              <input class="data__field field" id="age" name="age" placeholder="7" type="number" />
             </li>
           </ul>
         </div>
 
-        <!--Может быть есть смысл давать названия классам по типу формы? Там например Нижнему дать Программ__Радио, ну или что-то такое? или все же по сути инфы именно лучше?-->
         <div class="form__options options">
           <legend class="visuallyhidden">Выбор программы:</legend>
-          <ul class="options__list">
+          <ul class="options__list form-list">
             <li class="options__item">
-              <label class="options__label" for="slim">Похудение</label>
               <input checked class="options__input" id="slim" name="options" type="radio" value="slim">
+              <label class="options__label" for="slim">Похудение</label>
             </li>
             <li class="options__item">
-              <label class="options__label" for="mass-gain">Набор массы</label>
               <input class="options__input" id="mass-gain" name="options" type="radio" value="mass-gain">
+              <label class="options__label" for="mass-gain">Набор массы</label>
             </li>
             <li class="options__item">
-              <label class="options__label" for="advice">Не знаю (нужен ваш совет)</label>
               <input class="options__input" id="advice" name="options" type="radio" value="advice">
+              <label class="options__label" for="advice">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
         </div>
 
         <div class="form__owner-data owner-data">
-          <legend class="owner-data__legend">Контактные данные (владельца кота):</legend>
-          <ul class="owner-data__list">
-            <li class="owner-data__item">
-              <label class="owner-data__label" for="email">E-MAIL:*</label>
-              <input class="owner-data__field" id="email" name="email" placeholder="kuklachev@gmail.com" type="email" />
+          <legend class="owner-data__legend">Контактные данные (владельца кота)</legend>
+          <ul class="owner-data__list form-list">
+            <li class="owner-data__item owner-data__item--email">
+              <label class="owner-data__label label" for="email">E-MAIL:*</label>
+              <input class="owner-data__field field" id="email" name="email" placeholder="kuklachev@gmail.com" type="email" />
             </li>
-            <li class="owner-data__item">
-              <label class="owner-data__label" for="telephone">Телефон:*</label>
-              <input class="owner-data__field" id="telephone" name="telephone" placeholder="8 (960) 900-60-90"
+            <li class="owner-data__item owner-data__item--phone">
+              <label class="owner-data__label label" for="telephone">Телефон:*</label>
+              <input class="owner-data__field field" id="telephone" name="telephone" placeholder="8 (960) 900-60-90"
                 type="tel" />
             </li>
           </ul>
         </div>
 
         <div class="form__comment comment">
-          <legend class="comment__legend">Комментарий:</legend>
+          <legend class="comment__legend">Комментарий</legend>
           <textarea class="comment__text" id="comment" name="comment-text"
             placeholder="Расскажите обо всех повадках кота" rows="5" cols="65"></textarea>
         </div>
 
         <div class="form__extra extra">
-          <legend class="extra__legend">Дополнительно:</legend>
-          <ul class="extra__list">
+          <legend class="extra__legend">Дополнительно</legend>
+          <ul class="extra__list form-list">
             <li class="extra__item">
-              <label class="extra__label" for="sweetener">Сахарозаменитель</label>
               <input checked class="extra__input" id="sweetener" name="extra" type="checkbox" value="sweetener">
+              <label class="extra__label" for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="extra__item">
-              <label class="extra__label" for="water">Питьевая вода</label>
               <input class="extra__input" id="water" name="extra" type="checkbox" value="water">
+              <label class="extra__label" for="water">Питьевая вода</label>
             </li>
             <li class="extra__item">
-              <label class="extra__label" for="milk">Молоко</label>
               <input class="extra__input" id="milk" name="extra" type="checkbox" value="milk">
+              <label class="extra__label" for="milk">Молоко</label>
             </li>
             <li class="extra__item">
-              <label class="extra__label" for="vitamins">Витамины</label>
               <input class="extra__input" id="vitamins" name="extra" type="checkbox" value="vitamins">
+              <label class="extra__label" for="vitamins">Витамины</label>
             </li>
           </ul>
         </div>
+        <div class="form__button--wrapper">
         <button class="form__button button" type="submit">
           Отправить заявку
         </button>
         <span class="form__discription">* — Обязательные поля</span>
+        </div>
       </form>
+    </div>
     </section>
 
     <section class="find-us bg-gray">
       <div class="find-us__wrapper">
+        <div class="find-us__info">
         <h2 class="visuallyhidden">Как нас найти</h2>
-        <!--стоит ли брать текст и адрес (т.е. эти два блока) еще в один див? ИЛи по раздельности не будет проблем их размещать-->
+        <div class="find-us__info--wrap">
         <div class="find-us__invite">
           приглашаем
           к сотрудничеству
@@ -148,43 +151,45 @@
           Санкт-Петербург
         </address>
       </div>
+      </div>
       <div class="find-us__map">
         <img class="exemplar__picture" src="img/bg-map-mobile@1x.png"
           alt="карта с указанным адресом, где можно найти магазин" width="320" height="333" />
       </div>
-    </section>
-  </main>
-
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <div class="page-footer__logo">
-        <a class="page-footer__logo-text">
-          <img src="img/svg/logo-footer.svg" width="110" height="18" alt="логотип интернет-магазина Кот энерджи" />
-        </a>
-      </div>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--vk" aria-label="ссылка на социальную сеть Вконтакте" href="#"><img
-              alt="Логотип социальной сети Вконтакте" height="12" src="img/svg/icon-vk.svg" width="22"></a></li>
-        <li class="social__item">
-          <a class="social__link social__link--insta" aria-label="ссылка на социальную сеть Инстаграм" href="#"><img
-              alt="Логотип социальной сети Инстаграм" height="16" src="img/svg/icon-insta.svg" width="16"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--fb" aria-label="ссылка на социальную сеть Фейсбук" href="#"><img
-              alt="Логотип социальной сети Фейсбук" height="19" src="img/svg/icon-fb.svg" width="10" /></a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <div class="copyright__text">
-          HTML Academy
-        </div>
-        <a href="#" class="copyright__logo">
-          <img alt="Логотип HTML академии" src="img/svg/htmlacademy.svg" height="34" width="27" />
-        </a>
-      </div>
     </div>
-  </footer>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-text">
+            <img src="img/svg/logo-footer.svg" width="110" height="18" alt="логотип интернет-магазина Кот энерджи" />
+          </a>
+        </div>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" aria-label="ссылка на социальную сеть Вконтакте" href="#"><img
+                alt="Логотип социальной сети Вконтакте" height="12" src="img/svg/icon-vk.svg" width="22"></a></li>
+          <li class="social__item">
+            <a class="social__link social__link--insta" aria-label="ссылка на социальную сеть Инстаграм" href="#"><img
+                alt="Логотип социальной сети Инстаграм" height="16" src="img/svg/icon-insta.svg" width="16"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" aria-label="ссылка на социальную сеть Фейсбук" href="#"><img
+                alt="Логотип социальной сети Фейсбук" height="19" src="img/svg/icon-fb.svg" width="10" /></a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <div class="copyright__text">
+            HTML Academy
+          </div>
+          <a href="#" class="copyright__logo">
+            <img alt="Логотип HTML академии" src="img/svg/htmlacademy.svg" height="34" width="27" />
+          </a>
+        </div>
+      </div>
+    </footer>
 
 </body>
 

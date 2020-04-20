@@ -9,6 +9,8 @@
 }
 
 .product-list {
+  padding-bottom: 25px;
+
   h3 {
     @include title-small;
     line-height: 20px;

@@ -89,6 +89,20 @@
   .exemplar__title {
     font-size: 60px;
     line-height: 60px;
+
+    position: relative;
+
+    padding-top: 50px;
+  }
+
+  .exemplar__title::before {
+    content: "";
+
+    border: solid 1px #eeeeee;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
   }
 
   .exemplar__info {
@@ -130,6 +144,7 @@
 
   .exemplar__picture {
     width: 100%;
+    height: 100%;
     padding-top: 20px;
   }
 
@@ -193,5 +208,11 @@
 
   .exemplar__title {
     padding-bottom: 150px;
+  }
+
+  .exemplar__title::before {
+    content: "";
+
+    display: none;
   }
 }

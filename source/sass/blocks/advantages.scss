@@ -5,6 +5,8 @@
 
 .advantages__title {
   @include title-top;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 .advantages__list {
@@ -46,9 +48,9 @@
     width: 354px;
     height: 230px;
     line-height: 24px;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
     padding: 0;
-    padding-top: 120px;
+    padding-top: 140px;
 
     .advanages__item--wrap {
       display: block;
@@ -68,7 +70,7 @@
     height: 245px;
     margin-bottom: 100px;
     padding: 0;
-    padding-top: 120px;
+    padding-top: 140px;
     margin-right: 75px;
   }
 

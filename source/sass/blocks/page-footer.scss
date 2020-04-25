@@ -20,18 +20,47 @@
 
 .page-footer__social {
   display: flex;
-  width: 110px;
-  justify-content: space-between;
+  width: auto;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
   list-style: none;
+
+  position: relative;
 
   a {
     color: black;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    border: solid 1px black;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0.1;
+  }
+
+  .social__item--insta {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    border: solid 1px black;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
   }
 }
 
@@ -57,10 +86,22 @@
     min-width: 708px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .page-footer__copyright {
     padding: 0;
+  }
+
+  .page-footer__social {
+    margin: 0;
+  }
+
+  .page-footer__social::after,
+  .page-footer__social::before {
+    content: "";
+
+    display: none;
   }
 }
 

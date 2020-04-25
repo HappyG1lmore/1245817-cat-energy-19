@@ -8,7 +8,6 @@
 
 .page-header {
   width: 320px;
-  min-height: 265px;
   display: flex;
   margin-right: auto;
   margin-left: auto;
@@ -17,7 +16,7 @@
 
 .page-header__wrapper {
   display: flex;
-  width: 280px;
+  min-width: 320px;
   flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
@@ -25,6 +24,20 @@
 
 .page-header-top {
   display: flex;
+  width: 100%;
+  height: 65px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.page-header-top::after {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -38,6 +51,14 @@
 .page-header__logo-link {
   width: 195px;
   height: 38px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 
@@ -45,11 +66,15 @@
   .page-header {
     min-width: 768px;
     min-height: 85px;
+
+    padding-bottom: 30px;
   }
 
   .page-header__wrapper {
     min-width: 708px;
     height: 75px;
+    justify-content: center;
+    padding-top: 25px;
   }
 
   .page-header__logo {
@@ -59,10 +84,21 @@
     background-repeat: no-repeat;
   }
 
+  .page-header__logo-link {
+    height: auto;
+    padding-top: 5px;
+  }
+
   .page-header-top {
     width: 175px;
     height: 75px;
     margin-right: 90px;
+    padding: 0;
+  }
+
+  .page-header-top::after {
+    content: "";
+    display: none;
   }
 }
 
@@ -76,6 +112,8 @@
     height: 75px;
 
     justify-content: space-between;
+
+    margin-top: 25px;
   }
 
   .page-header__logo {

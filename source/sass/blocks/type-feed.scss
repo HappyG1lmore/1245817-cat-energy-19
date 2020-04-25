@@ -5,14 +5,30 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding-bottom: 25px;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  margin-left: 70px;
+
+  position: relative;
 }
 
 .type-feed__text {
   @include text-all;
   font-family: $font-two;
   margin: 0;
-  padding-bottom: 45px;
+  padding-bottom: 22px;
+  position: relative;
+}
+
+.type-feed__text::after {
+  content: "";
+
+  position: absolute;
+  border: solid 1px black;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0.1;
 }
 
 .type-feed__link-catalog {
@@ -20,6 +36,15 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  padding-top: 22px;
+  position: relative;
+}
+
+.type-feed__link-catalog::before {
+  content: url("../img/svg/icon-right-arrow-verylong.svg");
+  position: absolute;
+  right: -60px;
+  top: 6px;
 }
 
 .type-feed__item {
@@ -30,6 +55,10 @@
   display: flex;
   justify-content: center;
   height: 266px;
+ }
+
+.type-feed__item--mass-gain {
+  margin-bottom: 40px;
 }
 
 .type-feed__wrapper {
@@ -37,7 +66,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 240px;
-  height: 205px;
+  height: auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -48,12 +77,18 @@
   .type-feed__title {
     @include title-top;
     line-height: 37, 02;
+
+    padding-top: 70px;
+    padding-bottom: 25px;
+    margin: 0;
   }
 
   .type-feed__text {
     @include title-small;
     line-height: 24px;
     font-family: $font-two;
+
+    padding-bottom: 60px;
   }
 
   .type-feed__link-catalog {
@@ -65,7 +100,13 @@
     height: 372px;
     width: 708px;
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+  }
+
+  .type-feed__item--mass-gain {
+    margin-bottom: 40px;
   }
 
   .type-feed__wrapper {
@@ -73,12 +114,33 @@
     height: 230px;
     margin-left: 55px;
   }
+
+  .type-feed__text::after {
+    content: "";
+
+    display: none;
+  }
+
+  .type-feed__link-catalog {
+    padding: 0;
+  }
+
+  .type-feed__link-catalog::before {
+
+    position: absolute;
+    right: -60px;
+    top: -15px;
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .type-feed {
     display: flex;
     justify-content: space-between;
+
+    margin-top: -50px;
+    margin-bottom: 35px;
   }
 
   .type-feed__item--los-weight {
@@ -90,12 +152,19 @@
     line-height: 37, 02;
     margin-left: auto;
     margin-right: auto;
+
+    padding-top: 65px;
+    padding-bottom: 65px;
   }
 
   .type-feed__text {
     @include title-small;
     line-height: 24px;
     font-family: $font-two;
+
+    width: 465px;
+
+    padding-bottom: 35px;
   }
 
   .type-feed__link-catalog {
@@ -112,5 +181,6 @@
     width: 470px;
     height: 230px;
     padding-left: 55px;
+    margin: 0;
   }
 }

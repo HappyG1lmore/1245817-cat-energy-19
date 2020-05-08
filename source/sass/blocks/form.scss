@@ -26,19 +26,23 @@
   @include title-middle;
   line-height: 24px;
   text-transform: none;
+
+  padding-bottom: 30px;
 }
 
 .form__button {
   border: none;
+  margin-bottom: 25px;
 }
 
 .form__discription {
   @include text-all;
   text-transform: none;
-}
 
-.form-list {
-  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 35px;
 }
 
 .data__item,
@@ -46,16 +50,17 @@
   display: flex;
 }
 
-.field {
-  flex-grow: 1;
-}
-
 .label {
   padding-right: 15px;
 }
 
+.comment {
+  padding-bottom: 30px;
+}
+
 .comment__text {
   width: 280px;
+  padding: 13px;
 }
 
 @media (min-width: $tablet-width) {
@@ -116,6 +121,10 @@
 
   .comment__text {
     width: 630px;
+  }
+
+  .form__options {
+    border: solid 1px #cdcdcd;
   }
 }
 

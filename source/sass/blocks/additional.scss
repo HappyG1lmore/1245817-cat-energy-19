@@ -6,7 +6,28 @@
   @include title-middle;
   line-height: 24px;
 
-  padding-bottom: 25px;
+  padding-bottom: 30px;
+  margin: 0;
+
+  position: relative;
+}
+
+.additional__title::before {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.additional__title::after {
+  content: "";
+  border: solid 3px $green;
+  position: absolute;
+  right: -24px;
+  top: 13px;
+  width: 53px;
 }
 
 .additional ul {
@@ -15,10 +36,29 @@
 
 .additional__item {
   padding-left: 0;
+  margin: 0;
 
   table {
     width: 100%;
   }
+}
+
+.additional-item {
+  position: relative;
+}
+
+.additional-item::after {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.additional-item__wrapper {
+  padding-bottom: 18px;
+  padding-top: 14px;
 }
 
 .additional-item__title {
@@ -81,7 +121,30 @@
   .additional__title {
     @include title-top;
     line-height: 36px;
+
+    padding-bottom: 75px;
+    padding-left: 35px;
   }
+
+  .additional__title::before {
+    content: "";
+    border: solid 3px $green;
+    position: absolute;
+    left: -50px;
+    top: 20px;
+    width: 28px;
+    height: 0;
+  }
+
+  .additional__title::after {
+    content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: -25px;
+    top: 20px;
+    width: 327px;
+  }
+
 
   .additional-item__title {
     @include title-small-tab;
@@ -95,10 +158,18 @@
     @include text-all-tab;
     line-height: 20px;
     font-family: $font-two;
+
+    width: 75%;
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  .additional-item__info--price {
+    margin-left: 0;
   }
 
   .additional__wrapper {
-    width: 708px;
+    width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -116,6 +187,7 @@
     }
 
     table {
+      width: 60%;
       margin-left: auto;
     }
 
@@ -131,6 +203,17 @@
     border-bottom: none;
 
     display: flex;
+
+    margin-bottom: 25px;
+  }
+
+  .additional__button {
+    width: 100%;
+  }
+
+  .additional-item::after {
+    content: "";
+    display: none;
   }
 
   .additional-item:last-child {
@@ -176,6 +259,13 @@
     height: 25%;
     border-right: none;
     border-left: none;
+
+    margin-bottom: 0;
+  }
+
+  .additional-item__info {
+    width: 100%;
+    padding-bottom: 0;
   }
 
   .additional-item__wrapper {
@@ -202,16 +292,37 @@
     }
   }
 
+  .additional__title::before {
+    content: "";
+    border: solid 3px $green;
+    position: absolute;
+    left: -70px;
+    top: 20px;
+    width: 70px;
+    height: 0;
+  }
+
+  .additional__title::after {
+    content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: -995px;
+    top: 20px;
+    width: 955px;
+  }
+
   .additional__banner {
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     width: 245px;
     height: 290px;
 
+    margin-top: 0;
+
     span {
       width: 165px;
       text-align: center;
       margin-top: auto;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
       margin-left: auto;
       margin-right: auto;
     }

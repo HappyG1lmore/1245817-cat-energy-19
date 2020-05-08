@@ -6,28 +6,388 @@
 
 .program ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .program__title {
   @include title-top;
   line-height: 60px;
+
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .program__info {
   @include text-all;
   line-height: 18px;
   text-transform: uppercase;
+
+  margin: 0;
+  padding-bottom: 35px;
+}
+
+.data__list {
+  padding: 0;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.comment__text--textarea,
+.field {
+  padding: 15px;
+  opacity: 0.5;
+}
+
+.comment__text--textarea:hover,
+.field:hover {
+  opacity: 1;
+}
+
+.field {
+  flex-grow: 1;
+}
+
+.field [type='number'] {
+  -moz-appearance:textfield;
+}
+
+.field::-webkit-outer-spin-button,
+.field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.comment__text--textarea:focus,
+.field:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+.field:invalid {
+  outline: none;
+  border: 2px solid red;
+}
+
+.data__item {
+  padding-bottom: 15px;
+}
+
+.data__item:last-child {
+  padding-bottom: 0;
+}
+
+
+.options__item {
+  padding-bottom: 25px;
+  width: max-content;
+}
+
+.options__item:last-child {
+  padding-bottom: 0;
+}
+
+.options__list {
+  margin: 0;
+}
+
+.options {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  position: relative;
+}
+
+.options__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.options__label {
+  padding-left: 45px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.options__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.options__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: url("../../img/svg/rb/radiobutton_act.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+  opacity: 0;
+}
+
+.options__input:checked + .options__label::after {
+  opacity: 1;
+}
+
+.options__input:active + .options__label {
+  opacity: 0.3;
+
+  &::after,
+  &::before {
+    opacity: 0.3;
+  }
+}
+
+.options::before {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  top: 0;
+  left: -7.15%;
+  width: 114.3%;
+}
+
+.options::after {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: -7.15%;
+  width: 114.3%;
+}
+
+.owner-data {
+  padding-bottom: 30px;
+}
+
+.owner-data__item {
+  padding-bottom: 15px;
+}
+
+.owner-data__item:last-child {
+  padding: 0;
+}
+
+.owner-data__list {
+  margin: 0;
+}
+
+.owner-data__legend,
+.comment__legend,
+.extra__legend {
+  position: relative;
+}
+
+.owner-data__legend::after {content: "";
+  border: solid 3px $green;
+  position: absolute;
+  right: -85px;
+  top: 13px;
+  width: 153px;
+}
+
+.comment__legend::after {content: "";
+  border: solid 3px $green;
+  position: absolute;
+  right: -185px;
+  top: 13px;
+  width: 153px;
+}
+
+.extra__legend::after {content: "";
+  border: solid 3px $green;
+  position: absolute;
+  right: -185px;
+  top: 13px;
+  width: 153px;
+}
+
+.extra__list {
+  margin: 0;
+  padding-bottom: 35px;
+}
+
+.extra__item {
+  padding-bottom: 25px;
+  display: block;
+  width: max-content;
+}
+
+.extra__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.extra__label {
+  padding-left: 45px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.extra__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.extra__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background: url("../../img/svg/chb/tick.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+  opacity: 0;
+}
+
+.extra__input:checked + .extra__label::after {
+  opacity: 1;
+}
+
+.extra__input:active + .extra__label {
+  opacity: 0.3;
+
+  &::after,
+  &::before {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .program__title {
     @include title-top-tab;
     line-height: 60px;
+
+    width: 708px;
+    display: block;
+
+    padding-bottom: 50px;
+    margin: 0 auto;
+
   }
 
   .program {
     width: 708px;
     padding-bottom: 70px;
+  }
+
+  .program__info {
+    padding-bottom: 70px;
+  }
+
+  .program__form .options::before,
+  .program__form .options::after {
+    display: none;
+}
+
+  .options__item {
+  padding-left: 25px;
+}
+
+  .data__list {
+    padding-bottom: 70px;
+  }
+
+  .options {
+    margin-bottom: 80px;
+  }
+
+  .owner-data__legend::after {content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: -185px;
+    top: 13px;
+    width: 153px;
+  }
+
+  .owner-data__legend::before {content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: 385px;
+    top: 13px;
+    width: 53px;
+  }
+
+
+  .comment__legend::after {content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: -185px;
+    top: 13px;
+    width: 153px;
+  }
+
+  .comment__legend::before {content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: 185px;
+    top: 13px;
+    width: 53px;
+  }
+
+  .extra__legend::after {content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: -185px;
+    top: 13px;
+    width: 153px;
+  }
+
+  .extra__legend::before {content: "";
+    border: solid 3px $green;
+    position: absolute;
+    right: 185px;
+    top: 13px;
+    width: 53px;
   }
 }
 

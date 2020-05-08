@@ -55,7 +55,7 @@
   display: flex;
   justify-content: center;
   height: 266px;
- }
+}
 
 .type-feed__item--mass-gain {
   margin-bottom: 40px;
@@ -94,6 +94,8 @@
   .type-feed__link-catalog {
     font-size: 20px;
     line-height: 20px;
+
+    padding: 0;
   }
 
   .type-feed__item {
@@ -121,17 +123,12 @@
     display: none;
   }
 
-  .type-feed__link-catalog {
-    padding: 0;
-  }
-
   .type-feed__link-catalog::before {
 
     position: absolute;
     right: -60px;
     top: -15px;
   }
-
 }
 
 @media (min-width: $desktop-width) {

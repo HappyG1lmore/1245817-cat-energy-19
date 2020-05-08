@@ -77,6 +77,22 @@
   font-family: $font-two;
 }
 
+.page-footer__logo-text:hover {
+  opacity: 0.8;
+}
+
+.page-footer__logo-text:active {
+  opacity: 0.3;
+}
+
+.social__item:hover {
+  opacity: 0.8;
+}
+
+.social__item:active {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-width) {
   .page-footer {
     width: 768px;
@@ -95,6 +111,8 @@
 
   .page-footer__social {
     margin: 0;
+    width: 100px;
+    justify-content: space-between;
   }
 
   .page-footer__social::after,
@@ -107,7 +125,7 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    min-width: 1440px;
+    min-width: 1300px;
   }
 
   .page-footer__wrapper {

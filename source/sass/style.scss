@@ -14,7 +14,7 @@
 }
 
 @mixin title-middle-tab {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
 }
 
@@ -76,5 +76,5 @@ $desktop-width: 1300px;
 @import "blocks/product-list.scss";
 @import "blocks/additional.scss";
 @import "blocks/program.scss";
-@import "blocks/form.scss";
+@import "blocks/form-page.scss";
 @import "blocks/main-nav.scss";

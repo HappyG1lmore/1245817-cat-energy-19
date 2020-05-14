@@ -182,6 +182,16 @@
   .site-list__link.active::after {
     content: "";
 
+    border: solid 2px #ffffff;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+  }
+
+  .site-list__link--catalog.active::after {
+    content: "";
+
     border: solid 2px $color-main;
     position: absolute;
     bottom: -20%;

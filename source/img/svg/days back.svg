@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="163" height="73" viewBox="0 0 163 73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-opacity: 0;
+        stroke: #cdcdcd;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <rect id="days_back" data-name="days back" class="cls-1" x="0.5" y="0.5" width="162" height="72" rx="3" ry="3"/>
+</svg>

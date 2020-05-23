@@ -14,7 +14,7 @@
 }
 
 @mixin title-middle-tab {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
 }
 
@@ -54,7 +54,10 @@ $font-one: "Oswald", "Arial", sans-serif;
 $font-two: "Arial", sans-serif;
 
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1300px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
 /*
  basic - Основные
@@ -76,5 +79,5 @@ $desktop-width: 1440px;
 @import "blocks/product-list.scss";
 @import "blocks/additional.scss";
 @import "blocks/program.scss";
-@import "blocks/form.scss";
+@import "blocks/form-page.scss";
 @import "blocks/main-nav.scss";

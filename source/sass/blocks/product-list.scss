@@ -9,18 +9,83 @@
 }
 
 .product-list {
-  padding-bottom: 25px;
+  padding-bottom: 27px;
+}
+
+.product-list__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 23px;
+
+  margin-top: -1px;
+
+
+  width: 100%;
+  height: 210px;
+
+  position: relative;
+}
+
+.product-list__item::after {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.product-list__img {
+  width: 50%;
+}
+
+.product-list__text {
+  width: 50%;
+  height: 140px;
+}
+
+.product-item__pic {
+  height: 140px;
+}
+
+.product-list__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+
+}
+
+h3 {
+  @include title-small;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+table {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+
+  font-family: $font-two;
+}
+
+.product-list__wrapper--more {
+  padding-top: 80px;
+  padding-bottom: 19px;
+
+  display: flex;
+  flex-direction: column;
 
   h3 {
-    @include title-small;
-    line-height: 20px;
-    text-transform: uppercase;
-  }
-
-  table {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
+    padding-bottom: 7px;
+    padding-left: 3px;
+    margin: 0 auto;
   }
 }
 
@@ -35,6 +100,8 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+    margin: 0 auto;
+    font-family: $font-two;
   }
 
   a {
@@ -43,21 +110,61 @@
   }
 }
 
+
+.product-list__wrapper--more::before {
+  content: "";
+  background-image: url("../img/svg/icon-plus-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 26px;
+  left: 125px;
+}
+
+.product-list__title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  width: 70%;
+}
+
+.product-list__info {
+  width: 105%;
+  margin-left: -2px;
+
+
+  tr {
+    width: 100%;
+    display: flex;
+    height: 16px;
+
+  }
+
+  td:last-child {
+    margin-left: auto;
+  }
+}
+
+
 @media (min-width: $tablet-width) {
   .product-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 165px;
+    justify-content: flex-start;
+    padding-top: 135px;
+    padding-bottom: 43px;
+
+    width: 100%;
   }
 
   .product-list__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
     width: 324px;
-    height: 433px;
+    height: 431px;
     background-color: $gray;
     margin-bottom: 140px;
     margin-right: 60px;
@@ -72,10 +179,15 @@
     margin-bottom: 25px;
   }
   /* не понял как в скобках написать 1 и 2, чтобы одной строкой было. Через запятую не работает ч*/
+
   .product-list__wrapper {
     display: flex;
     flex-direction: column;
     width: 250px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
     padding-bottom: 40px;
 
     h3 {
@@ -95,6 +207,8 @@
 
       td {
         height: 33px;
+        display: flex;
+        align-items: center;
       }
 
       td:nth-child(2n) {
@@ -105,34 +219,92 @@
     }
   }
 
+  .product-list__wrapper--more::before {
+    content: "";
+    background-image: url("../img/svg/icon-plus.svg");
+
+    width: 60px;
+    height: 60px;
+
+    top: 56px;
+    left: 133px;
+  }
+
+  .product-list__wrapper--more {
+    padding-bottom: 26px;
+  }
+
+  .product-list__item::after {
+    display: none;
+  }
+
   .product-item__button {
-    width: 100%;
+    width: 250px;
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active span {
+      opacity: 0.3;
+    }
+  }
+
+  .product-item__img {
+    left: 0;
+    top: -45px;
+    position: absolute;
+  }
+
+  .product-item:nth-child(2n) .product-item__img {
+    top: -83px;
   }
 
   .product-list__text {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 16px;
+
+    width: 100%;
+  }
+
+  .product-list__title {
+    padding-bottom: 16px;
+    padding-top: 1px;
+  }
+
+  .product-list__info tr {
+    position: relative;
+    height: auto;
+    width: 102%;
+  }
+
+  .product-list__info tr::after {
+    content: "";
+    border: solid 1px #cdcdcd;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 
   .product-list__more {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     width: 324px;
     height: 433px;
     margin-right: 0;
-
-    justify-content: flex-end;
-
-    .product-list__wrapper {
-      align-items: center;
-    }
+    background-color: white;
+    border: solid 1px $gray;
 
     h3 {
       display: inline-block;
-      width: 135px;
-      padding-bottom: 27px;
+      width: 140px;
+
+      padding-bottom: 29px;
     }
 
     span {
@@ -142,21 +314,37 @@
       display: inline-block;
       width: 175px;
       text-align: center;
-      padding-bottom: 86px;
+      padding-bottom: 61px;
     }
   }
 
   .product-list__button--show-all {
-    width: 100%;
+    width: 250px;
+    margin-bottom: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .product-list {
+    padding-bottom: 44px;
+  }
+
+
   .product-list__item {
     width: 245px;
-    height: 431px;
+    height: 436px;
 
     margin-right: 80px;
+    padding-bottom: 42px;
+  }
+
+  .product-item__button {
+    width: 170px;
+    margin-top: 10px;
+  }
+
+  .product-list__button--show-all {
+    width: 170px;
   }
 
   .product-list__item:nth-child(2n) {
@@ -175,11 +363,62 @@
   }
 
   .product-list__wrapper {
-    width: 170px;
-    padding-bottom: 40px;
+    width: 100%;
+
 
     table {
-      padding-bottom: 33px;
+      padding-bottom: 25px;
     }
+
+    position: relative;
+  }
+
+  .product-list__wrapper--more {
+    margin-top: 25px;
+    padding-bottom: 0;
+  }
+
+  .product-item__img {
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: -47px;
+  }
+
+  .product-list__title {
+    padding-bottom: 15px;
+    padding-top: 4px;
+  }
+
+  .product-list__more {
+    padding-bottom: 40px;
+  }
+
+  .product-list__wrapper--more {
+    padding-bottom: 26px;
+    margin-left: -1px;
+
+  }
+
+  .product-list__info {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+
+    tr {
+    width: 170px;
+    height: 32px;
+    }
+  }
+
+  .product-list__wrapper--more::before {
+    top: -45px;
+    left: 92px;
+  }
+
+  .product-list__button--show-all {
+    width: 170px;
+    margin-bottom: 5px;
   }
 }

@@ -4,6 +4,11 @@
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+
+  margin: 0;
+  padding-top: 29px;
+  padding-bottom: 11px;
+
 }
 
 .banner__text {
@@ -13,10 +18,10 @@
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
+
 }
 
 .banner {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +31,7 @@
 
 .banner__picture {
   text-align: center;
+  padding-top: 15px;
 }
 
 .banner__buttom {
@@ -36,41 +42,120 @@
 .banner__button-wrap {
   margin: 0;
   width: 280px;
-
-
-  bottom: 0;
+  order: 2;
 
   a {
     color: white;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active .banner__button {
+    opacity: 0.3;
   }
 }
 
 @media (min-width: $tablet-width) {
   .banner {
     align-items: flex-start;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: auto;
+    min-width: 768px;
   }
 
   .banner__title {
+    margin: 0;
+    padding-top: 35px;
+    padding-left: 18px;
+    padding-bottom: 41px;
+
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
     text-align: left;
+
+    color: black;
+  }
+
+  .banner__picture {
+    position: relative;
+    right: 10px;
+    z-index: -3;
+    margin-top: -65px;
   }
 
   .banner__text {
+    margin: 0;
+    padding-bottom: 48px;
+    padding-left: 19px;
+
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
+    color: black;
   }
 
-  .banner__button-wrap {
+   .banner__button-wrap {
     left: 0;
     top: 300px;
+    order: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+
+    width: 245px;
+    height: 52px;
+
+    margin-left: 20px;
+  }
+
+  .banner__image {
+    width: 100%;
+    margin-left: -60px;
+    margin-top: -30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .banner {
-    width: 1330px;
+    width: 1300px;
+    margin-left: 7%;
+    margin-bottom: 0;
+    height: auto;
+
+    position: relative;
+  }
+
+  .banner__title {
+    padding-top: 92px;
+    padding-left: 0;
+    margin-left: -5px;
+  }
+
+  .banner__text {
+    padding-left: 0;
+    margin-left: -5px;
+  }
+
+  .banner__picture {
+    position: absolute;
+    right: 219px;
+    top: 63px;
+    z-index: 1;
+
+    width: 550px;
+    height: auto;
+  }
+
+  .banner__button-wrap {
+    height: 52px;
+    margin-left: -5px;
+    margin-top: 5px;
+
   }
 }

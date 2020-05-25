@@ -1,0 +1,143 @@
+.options__item {
+  padding-bottom: 13px;
+  width: max-content;
+}
+
+.options__item:last-child {
+  padding-bottom: 0;
+}
+
+.options__list {
+  margin: 0;
+}
+
+.options {
+  padding-top: 23px;
+  padding-bottom: 22px;
+
+  position: relative;
+}
+
+.options__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.options__label {
+  padding-left: 46px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.options__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.options__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: $green;
+  border-radius: 50%;
+  z-index: 3;
+  opacity: 0;
+}
+
+.options__label:hover::before {
+  border: 1px solid #bcbcbc;
+}
+
+.options__input:checked + .options__label::after {
+  opacity: 1;
+}
+
+.options__input:active + .options__label {
+  opacity: 0.3;
+
+  &::after,
+  &::before {
+    opacity: 0.3;
+  }
+}
+
+.options::before {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  top: 0;
+  left: -7.15%;
+  width: 114.3%;
+}
+
+.options::after {
+  content: "";
+  border: solid 1px #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: -7.15%;
+  width: 114.3%;
+}
+
+@media (min-width: $tablet-width) {
+  .options {
+    margin-bottom: 80px;
+  }
+
+  .options__item {
+    padding-left: 25px;
+  }
+
+  .options__label {
+    padding-left: 60px;
+    margin-left: 5px;
+
+    height: 40px;
+  }
+
+  .options__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .options__label::after {
+    left: 11px;
+    top: 11px;
+
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .options {
+    margin-bottom: 70px;
+  }
+
+  .options__label {
+    padding-left: 56px;
+  }
+}

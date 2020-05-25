@@ -26,13 +26,13 @@
   z-index: 2;
 }
 
-.main-nav--closed .main-nav__button {
+.main-nav.main-nav--closed .main-nav__button {
   background-color: white;
   background-image: url("../../img/svg/icon-mobile-menu.svg");
   background-repeat: no-repeat;
 }
 
-.main-nav--opened .main-nav__button {
+.main-nav.main-nav--opened .main-nav__button {
   background-color: white;
   background-image: url("../../img/svg/icon-close.svg");
   background-repeat: no-repeat;
@@ -41,69 +41,19 @@
   width: 20px;
 }
 
-.main-nav--closed ~ .main-nav__btns {
+.main-nav.main-nav--closed ~ .main-nav__btns {
   display: none;
 }
 
-.main-nav--opened ~ .main-nav__btns {
+.main-nav.main-nav--opened ~ .main-nav__btns {
   display: block;
 }
 
-.site-list__item {
-  height: 66px;
-  position: relative;
-  display: flex;
-}
-
-.site-list__item::after {
-  content: "";
-  border: solid 1px #eeeeee;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.site-list a[href] {
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.site-list__link {
-  width: auto;
-  position: relative;
-  height: 45%;
-  margin: auto;
-  margin-top: 23px;
-}
-
-.site-list__link.active::after {
-  content: "";
-
-  display: none;
-
-  border: solid 1px $color-main;
-  position: absolute;
-  bottom: -18%;
-  left: 1px;
-  width: 100%;
-}
 
 @media (min-width: $tablet-width) {
   .main-nav__btns {
     min-height: 65px;
     margin-left: 3px;
-  }
-
-  .site-list__link.active::after {
-    content: "";
-
-    display: block;
   }
 
   .main-nav__list {
@@ -131,11 +81,6 @@
     font-weight: 400;
     text-transform: uppercase;
   }
-
-  .site-list__item::after {
-    content: "";
-    display: none;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -150,31 +95,5 @@
 
   .main-nav__list {
     justify-content: flex-end;
-  }
-
-  .site-list__item--catalog a {
-    color: black;
-  }
-
-
-  .site-list__link.active::after {
-    content: "";
-
-    display: block;
-    border: solid 2px #ffffff;
-    position: absolute;
-    bottom: -20%;
-    left: 0;
-    width: 100%;
-  }
-
-  .site-list__link--catalog.active::after {
-    content: "";
-
-    border: solid 2px $color-main;
-    position: absolute;
-    bottom: -20%;
-    left: 0;
-    width: 100%;
   }
 }

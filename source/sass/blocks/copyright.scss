@@ -1,0 +1,48 @@
+.copyright__text {
+  @include title-small;
+  line-height: 16px;
+  font-family: $font-two;
+}
+
+.copyright__link {
+  margin-left: auto;
+}
+
+.copyright__link-text {
+  color: black;
+}
+
+.copyright__logo {
+  width: 35px;
+  height: 45px;
+
+  path{
+  fill: #666666;
+  }
+
+  &:hover {
+    path{
+      fill:#68b738;
+      }
+  }
+
+  &:active {
+    path{
+      fill:#68b738;
+      opacity: 0.3;
+      }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    padding-right: 15px;
+    padding-bottom: 9px;
+  }
+
+  .copyright__link {
+    padding-bottom: 7px;
+  }
+}
+
+

@@ -1,0 +1,30 @@
+.social__link path {
+  fill: #666666;
+}
+
+.social__link:hover path {
+  fill:#68b738;
+}
+
+.social__link:active path {
+  fill:#68b738;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .social__link.social__link--vk svg{
+    width: 30px;
+    height: 16px;
+  }
+
+  .social__link.social__link--insta svg{
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__link.social__link--fb svg{
+    width: 14px;
+    height: 28px;
+  }
+}
+

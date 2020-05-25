@@ -36,6 +36,10 @@
   font-weight: 400;
   padding-top: 19px;
   position: relative;
+
+  a {
+    color: black;
+  }
 }
 
 
@@ -61,7 +65,7 @@
   position: relative;
 }
 
-.type-feed__item--mass-gain {
+.type-feed__item.type-feed__item--mass-gain {
   margin-bottom: 40px;
 }
 
@@ -73,7 +77,7 @@
   height: auto;
 }
 
-.type-feed__title--wrap {
+.type-feed__title-wrap {
   display: flex;
   align-items: center;
 
@@ -92,7 +96,7 @@
   position: relative;
 }
 
-.type-feed__cat--slim {
+.type-feed__cat-slim {
   height: 50px;
   position: absolute;
 
@@ -103,7 +107,7 @@
   top: 20px;
 }
 
-.type-feed__cat--pro {
+.type-feed__cat-pro {
   width: 70px;
   position: absolute;
 
@@ -126,7 +130,7 @@
     margin: 0;
   }
 
-  .type-feed__title--mass-gain {
+  .type-feed__title.type-feed__title--mass-gain {
     padding-top: 71px;
   }
 
@@ -159,7 +163,7 @@
     position: relative;
   }
 
-  .type-feed__item--mass-gain {
+  .type-feed__item.type-feed__item--mass-gain {
     margin-bottom: 40px;
   }
 
@@ -188,18 +192,18 @@
     top: 76px;
   }
 
-  .type-feed__circle--mass-gain {
+  .type-feed__circle.type-feed__circle--mass-gain {
     top: 78px;
     right: 60px;
 
     padding-right: 5px;
   }
 
-  .type-feed__text--mass-gain {
+  .type-feed__text.type-feed__text--mass-gain {
     width: 340px;
   }
 
-  .type-feed__cat--slim {
+  .type-feed__cat-slim {
    width: 140px;
    height: 194px;
 
@@ -209,7 +213,7 @@
    position: absolute;
   }
 
-  .type-feed__cat--pro {
+  .type-feed__cat-pro {
     width: 268px;
     height: 120px;
 
@@ -228,7 +232,7 @@
     margin-bottom: 32px;
   }
 
-  .type-feed__item--los-weight {
+  .type-feed__item.type-feed__item--los-weight {
     margin-right: 80px;
   }
 
@@ -253,7 +257,7 @@
     margin-left: -2px;
   }
 
-  .type-feed__text--mass-gain {
+  .type-feed__text.type-feed__text--mass-gain {
     width: 465px;
   }
 
@@ -282,7 +286,7 @@
     margin: 0;
   }
 
-  .type-feed__title--wrap {
+  .type-feed__title-wrap {
     padding-bottom: 9px;
   }
 
@@ -292,7 +296,7 @@
     height: 100px;
   }
 
-  .type-feed__cat--slim {
+  .type-feed__cat-slim {
    width: 70px;
    height: 97px;
 
@@ -307,7 +311,7 @@
     margin-top: 7px;
   }
 
-  .type-feed__cat--pro {
+  .type-feed__cat-pro {
     width: 134px;
     height: 56px;
 
@@ -316,6 +320,4 @@
 
     position: absolute;
    }
-
-
 }

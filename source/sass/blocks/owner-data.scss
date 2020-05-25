@@ -1,0 +1,161 @@
+.owner-data__legend {
+  @include title-middle;
+  line-height: 24px;
+  text-transform: none;
+  background-color: white;
+
+  padding-right: 20px;
+  padding-top: 7px;
+  margin-bottom: 33px;
+
+  width: 210px;
+
+  position: relative;
+}
+
+.owner-data__item.owner-data__item--email,
+.owner-data__item.owner-data__item--phone {
+  position: relative;
+}
+
+.owner-data__icon.owner-data__icon--email {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+
+  width: 17px;
+  height: 13px;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+.owner-data__icon.owner-data__icon--phone {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 13px;
+}
+
+.owner-data {
+  padding-bottom: 6px;
+}
+
+.owner-data__item {
+  padding-bottom: 15px;
+  display: flex;
+}
+
+.owner-data__item:last-child {
+  padding: 0;
+}
+
+.owner-data__list {
+  margin: 0;
+}
+
+.owner-data__legend::after {
+  content: "";
+  border: solid 2px $green;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 100vw;
+  z-index: -1;
+}
+
+@media (min-width: $tablet-width) {
+  .owner-data__legend {
+    @include title-middle-tab;
+    line-height: 36px;
+
+    padding-bottom: 70px;
+
+    padding: 0 15px;
+  }
+
+  .owner-data__item.owner-data__item--email,
+  .owner-data__item.owner-data__item--phone {
+  padding-bottom: 20px;
+}
+
+.owner-data {
+  padding-bottom: 36px;
+}
+
+.owner-data__legend {
+  width: max-content;
+
+  margin: 0;
+  margin-left: -35px;
+  margin-top: -3px;
+
+  padding-left: 36px;
+  padding-right: 38px;
+  padding-bottom: 75px;
+}
+
+.owner-data__legend::after {
+  content: "";
+  border: solid 2px $green;
+  position: absolute;
+  top: 20px;
+  left: -60%;
+  width: 150vw;
+
+  z-index: -1;
+}
+
+.owner-data__icon.owner-data__icon--phone {
+  top: 18px;
+  right: 14px;
+}
+
+.owner-data__icon.owner-data__icon--email {
+  right: 16px;
+  top: 15px;
+}
+
+}
+
+@media (min-width: $desktop-width) {
+  .owner-data__list {
+    display: flex;
+
+    .owner-data__item {
+      width: 570px;
+    }
+  }
+
+  .owner-data__item.owner-data__item--phone {
+    margin-left: auto;
+  }
+
+  .owner-data {
+    padding-bottom: 17px;
+  }
+
+  .owner-data__legend {
+
+    margin-left: -37px;
+    margin-top: -3px;
+
+    padding-left: 36px;
+    padding-right: 40px;
+    padding-bottom: 75px;
+  }
+
+  .owner-data__icon.owner-data__icon--email {
+    right: 20px;
+  }
+
+  .owner-data__icon.owner-data__icon--phone {
+    top: 17px;
+    right: 19px;
+  }
+}

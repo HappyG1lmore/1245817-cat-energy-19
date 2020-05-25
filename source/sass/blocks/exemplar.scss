@@ -28,59 +28,9 @@
   width: 275px;
 }
 
-.exemplar__picture--wrap {
-  position: relative;
-
-}
-
-.result__title {
-  @include title-middle;
-  margin: 0;
-  padding-bottom: 15px;
-
+.exemplar__radio-wrap {
   position: relative;
 }
-
-.result__time .result__title::after {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='124.938' height='57' viewBox='0 0 124.938 57'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-opacity: 0; stroke: %23cdcdcd; stroke-linejoin: round; stroke-width: 1px; %7D %3C/style%3E%3C/defs%3E%3Crect id='weight_back_copy' data-name='weight back copy' class='cls-1' x='0.5' y='0.5' width='123.938' height='56' rx='3' ry='3'/%3E%3C/svg%3E%0A");
-
-  position: absolute;
-  top: -17px;
-  left: -22px;
-}
-
-.result__weight .result__title::after {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='124.938' height='57' viewBox='0 0 124.938 57'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-opacity: 0; stroke: %23cdcdcd; stroke-linejoin: round; stroke-width: 1px; %7D %3C/style%3E%3C/defs%3E%3Crect id='weight_back_copy' data-name='weight back copy' class='cls-1' x='0.5' y='0.5' width='123.938' height='56' rx='3' ry='3'/%3E%3C/svg%3E%0A");
-
-  position: absolute;
-  top: -16px;
-  left: -44px;
-
-}
-
-.result__info {
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 400;
-  font-family: $font-two;
-  width: 65px;
-  text-align: center;
-  background-color:$gray;
-
-  margin-top: -3px;
-  padding-left: 1px;
-  padding-right: 1px;
-
-  z-index:1;
-}
-
-.result__time {
-  .result__info {
-
-    width: 80px;
-  }
-}
-
 
 .exemplar__result {
   display: flex;
@@ -90,13 +40,6 @@
 
   padding-bottom: 18px;
 }
-
-.result__time,
-.result__weight {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
 
 .exemplar__expenses {
   @include text-all;
@@ -180,8 +123,6 @@
   }
 }
 
-
-
 .before:checked ~ .exemplar__picture {
   display: none;
 }
@@ -253,22 +194,6 @@
     padding-left: 15px;
   }
 
-  .result__title {
-    font-size: 30px;
-    line-height: 37px;
-  }
-
-  .result__info {
-    font-size: 14px;
-    line-height: 14px;
-
-    width: 130px;
-  }
-
-  .result__weight {
-    padding-right: 70px;
-  }
-
   .exemplar__expenses {
     font-size: 20px;
     line-height: 20px;
@@ -299,26 +224,7 @@
     width: 367px;
   }
 
-  .result__time .result__title::after {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='163' height='73' viewBox='0 0 163 73'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-opacity: 0; stroke: %23cdcdcd; stroke-linejoin: round; stroke-width: 1px; %7D %3C/style%3E%3C/defs%3E%3Crect id='days_back' data-name='days back' class='cls-1' x='0.5' y='0.5' width='162' height='72' rx='3' ry='3'/%3E%3C/svg%3E%0A");
 
-    position: absolute;
-    top: -17px;
-    left: -30px;
-  }
-
-  .result__weight .result__title::after {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='163' height='73' viewBox='0 0 163 73'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-opacity: 0; stroke: %23cdcdcd; stroke-linejoin: round; stroke-width: 1px; %7D %3C/style%3E%3C/defs%3E%3Crect id='days_back' data-name='days back' class='cls-1' x='0.5' y='0.5' width='162' height='72' rx='3' ry='3'/%3E%3C/svg%3E%0A");
-
-    position: absolute;
-    top: -16px;
-    left: -56px;
-
-  }
-
-  .result__info {
-    background-color: white;
-  }
 
   .exemplar__total {
     display: flex;
@@ -346,10 +252,6 @@
 
     padding-bottom: 0;
     margin-top: 20px;
-
-    .exemplar__after--after {
-      margin-left: auto;
-    }
   }
 
   .exemplar__radio {
@@ -439,7 +341,7 @@
     margin-right: 165px;
   }
 
-  .exemplar__info--wrap {
+  .exemplar__info-wrap {
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -447,7 +349,7 @@
     padding-left: 41px;
   }
 
-  .exemplar__picture--wrap {
+  .exemplar__radio-wrap {
    width: 650px;
   }
 
@@ -481,18 +383,7 @@
     margin-bottom: 14px;
   }
 
-  .result__info {
-    background-color: $gray;
-    padding-left: 5px;
-    padding-right: 5px;
 
-  }
-
-  .result__time {
-    .result__info {
-      width: 140px;
-    }
-  }
 
   .exemplar__title {
     padding-bottom: 145px;
@@ -503,10 +394,6 @@
     content: "";
 
     display: none;
-  }
-
-  .result__weight {
-    padding-right: 68px;
   }
 
   .exemplar__picture {

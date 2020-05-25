@@ -54,6 +54,15 @@
     content: "";
     display: none;
   }
+
+  .site-list__item {
+    padding-right: 35px;
+  }
+
+  .site-list__item:last-child {
+    padding-right: 0;
+  }
+
 }
 
 @media (min-width: $desktop-width) {

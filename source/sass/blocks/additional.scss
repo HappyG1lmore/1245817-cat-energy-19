@@ -5,10 +5,13 @@
 .additional__title {
   @include title-middle;
   line-height: 24px;
-
+  background-color: white;
   padding-bottom: 35px;
+  padding-right: 25px;
+
   margin: 0;
 
+  width: max-content;
   position: relative;
 }
 
@@ -18,16 +21,17 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 112.5%;
 }
 
 .additional__title::after {
   content: "";
   border: solid 2px $green;
   position: absolute;
-  right: -20px;
+  left: 0;
   top: 13px;
-  width: 53px;
+  width: 100vw;
+  z-index: -1;
 }
 
 .additional ul {
@@ -85,6 +89,7 @@
 
 .additional-item__price {
   margin-left: auto;
+  display: block;
 }
 
 .additional__button {
@@ -95,7 +100,6 @@
 }
 
 .additional__banner {
-
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -151,26 +155,31 @@
     padding-left: 37px;
     padding-right: 35px;
 
-    width: max-content;
-    background-color: white;
-
+    width: 420px;
   }
 
   .additional__title::after {
     content: "";
     border: solid 2px $green;
     position: absolute;
-    left: -50px;
     top: 20px;
+    right: -10%;
     width: 100vw;
-    height: 0;
+
     z-index: -1;
   }
 
   .additional__title::before {
     content: "";
-    display: none;
+    border: solid 2px $green;
+    position: absolute;
+    bottom: 90px;
+    left: -200%;
+    width: 100vw;
+
+    z-index: -1;
   }
+
 
   .additional-item__title {
     @include title-small-tab;
@@ -257,6 +266,8 @@
 
     margin-top: 67px;
 
+    justify-content: flex-start;
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
@@ -273,6 +284,10 @@
     }
   }
 
+  .additional__banner-text {
+    display: block;
+  }
+
   .additional__banner::before {
     content: "";
     left: 89px;
@@ -282,7 +297,7 @@
 
 @media (min-width: $desktop-width) {
   .additional__wrapper {
-    width: 100%;
+    width: 1220px;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -356,20 +371,21 @@
   }
 
   .additional__title::after {
-    left: -350px;
+    right: 0;
     top: 21px;
-    width: 130vw;
-    height: 0;
+    width: 100vw;
+    z-index: -1;
+  }
+
+  .additional__title::before {
+    left: -500%;
+    top: 21px;
+    width: 100vw;
     z-index: -1;
   }
 
   .additional-item__title {
     padding-bottom: 0;
-  }
-
-  .additional__title::before {
-    content: "";
-    display: none;
   }
 
   .additional__banner {

@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="css/normalize.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body>
@@ -61,10 +62,12 @@
       <section class="type-feed">
 
         <div class="type-feed__item type-feed__item--los-weight">
+
+
           <div class="type-feed__wrapper">
+            <img class="type-feed__cat-slim type-feed__link" alt="черная фигура кота который сидит" src="img/svg/icon-cat-slim.svg">
             <div class="type-feed__title-wrap">
             <div class="type-feed__circle">
-              <img class="type-feed__cat-slim type-feed__link" alt="черная фигура кота который сидит" src="img/svg/icon-cat-slim.svg">
             </div>
 
             <h2 class="type-feed__title">
@@ -84,11 +87,11 @@
 
         <div class="type-feed__item type-feed__item--mass-gain">
           <div class="type-feed__wrapper">
+            <img class="type-feed__cat-pro type-feed__link" alt="черная фигура мощного кота который идет" src="img/svg/icon-cat-pro.svg">
+
             <div class="type-feed__title-wrap">
               <div class="type-feed__circle type-feed__circle--mass-gain">
-                <img class="type-feed__cat-pro type-feed__link" alt="черная фигура мощного кота который идет" src="img/svg/icon-cat-pro.svg">
               </div>
-
             <h2 class="type-feed__title type-feed__title--mass-gain">
               Набор массы
             </h2>
@@ -141,6 +144,7 @@
         </ul>
       </section>
     </div>
+  </main>
 
     <section class="exemplar">
       <div class="exemplar__wrapper">
@@ -167,13 +171,10 @@
 
         </div>
       </div>
-          <div class="exemplar__radio-wrap">
-            <div class="exemplar__radio">
-              <input class="options__input before" checked id="before" name="exemplar" type="radio">
-              <label class="options__label before" for="before">Было</label>
-
-              <input class="options__input after" id="after" name="exemplar" type="radio">
-              <label class="options__label after" for="after">Стало</label>
+          <div class="exemplar__btns-wrap">
+            <div class="exemplar__btns">
+              <button class="exemplar__btn-result exemplar__btn-result--before" for="before">Было</button>
+              <button class="exemplar__btn-result exemplar__btn-result--after" for="after">Стало</button>
            </div>
           <picture>
               <source media="(min-width: 1300px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
@@ -203,13 +204,14 @@
         </address>
       </div>
       </div>
+    </div>
       <div class="find-us__map">
         <iframe class="map__img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533116!2d30.32085871647132!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1589963383278!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
         </iframe>
       </div>
-    </div>
+
     </section>
-  </main>
+
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">

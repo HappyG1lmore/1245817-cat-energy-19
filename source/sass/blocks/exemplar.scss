@@ -1,8 +1,8 @@
 .exemplar {
   background-color: $color-back;
-  width: 320px;
+  width: 100vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
@@ -11,6 +11,7 @@
 .exemplar__wrapper {
   width: 280px;
   padding-bottom: 10px;
+  margin: 0 auto;
 }
 
 .exemplar__title {
@@ -28,8 +29,8 @@
   width: 275px;
 }
 
-.exemplar__radio-wrap {
-  position: relative;
+.exemplar__info-wrap {
+  margin-left: -9px;
 }
 
 .exemplar__result {
@@ -63,73 +64,45 @@
 }
 
 .exemplar__picture {
-  width: 100%;
+  width: 311px;
   height: 232px;
   margin-bottom: 52px;
+
 }
 
-.exemplar__radio {
+.exemplar__btns-wrap {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.exemplar__btns {
   margin: 0;
-  display: flex;
-  width: 237px;
+  display: block;
 
   position: absolute;
 
-  bottom: 27px;
-  left: 24px;
+  bottom: 31px;
+  left: 48px;
 
-  .after {
-    margin-left: auto;
-  }
+  button {
+  border:none;
+  background: none;
 
-  .options__label {
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-
-    padding-left: 40px;
-  }
-
-  .options__label.before::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 90px;
-    top: 0;
-
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid #cdcdcd;
-    border-radius: 50%;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-
-  .options__label.before::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 99px;
-    top: 9px;
-
-    width: 12px;
-    height: 12px;
-
-    background-color: $green;
-    border-radius: 50%;
-    z-index: 3;
-    opacity: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
   }
 }
 
-.before:checked ~ .exemplar__picture {
-  display: none;
+.exemplar__btn-result.exemplar__btn-result--before {
+  padding-right: 111px;
 }
 
 @media (min-width: $tablet-width) {
   .exemplar {
-    width: 768px;
+    width: 100vw;
     background-color: transparent;
     position: relative;
 
@@ -183,12 +156,6 @@
     width: 680px;
   }
 
-  .result__time {
-    .result__info {
-      width: 140px;
-    }
-  }
-
   .exemplar__result {
     margin: 0;
     padding-left: 15px;
@@ -200,7 +167,7 @@
     text-align: start;
     margin-left: auto;
     margin-top: -5px;
-    margin-right: 1px;
+    margin-right: 10px;
 
     width: 175px;
 
@@ -223,8 +190,6 @@
     justify-content: flex-start;
     width: 367px;
   }
-
-
 
   .exemplar__total {
     display: flex;
@@ -254,72 +219,37 @@
     margin-top: 20px;
   }
 
-  .exemplar__radio {
-    margin: 0;
-    display: flex;
-    width: 615px;
+  .exemplar__btns-wrap {
+    position: relative;
+    width: 650px;
+    margin-left: 66px;
+    margin: 0 auto;
+   }
 
-    position: absolute;
+  .exemplar__btns {
+    bottom: -1px;
+    left: 38px;
 
-    bottom: -9px;
-    left: -1px;
-
-    .after {
-      margin-left: auto;
-    }
-
-    .options__label {
+    button {
       font-size: 20px;
       line-height: 20px;
+      font-weight: 400;
       text-transform: uppercase;
+      }
+  }
 
-      padding-left: 40px;
-    }
-
-    .options__label.before::before {
-      content: "";
-      left: 100px;
-      top: 0;
-
-      width: 40px;
-      height: 40px;
-    }
-
-    .options__label.after::before {
-      content: "";
-      left: -10px;
-      top: 0;
-
-      width: 40px;
-      height: 40px;
-    }
-
-    .options__label.before::after {
-      content: "";
-      left: 111px;
-      top: 11px;
-
-      width: 18px;
-      height: 18px;
-    }
-
-    .options__label.after::after {
-      content: "";
-      left: 1px;
-      top: 11px;
-
-      width: 18px;
-      height: 18px;
-    }
+  .exemplar__btn-result.exemplar__btn-result--before {
+    padding-right: 464px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .exemplar {
-    width: 1300px;
+    width: 1400px;
     height: 595px;
 
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: start;
 
     margin-bottom: 0;
@@ -338,7 +268,13 @@
     display: flex;
 
     padding-bottom: 65px;
-    margin-right: 165px;
+    margin-right: 183px;
+  }
+
+  .exemplar__btns-wrap {
+    position: relative;
+    width: 650px;
+    margin: 0 auto;
   }
 
   .exemplar__info-wrap {
@@ -349,7 +285,7 @@
     padding-left: 41px;
   }
 
-  .exemplar__radio-wrap {
+  .exemplar__btns-wrap {
    width: 650px;
   }
 
@@ -359,6 +295,8 @@
   }
 
   .exemplar__expenses {
+    display: flex;
+
     margin-left: 0;
     margin-right: auto;
     padding-top: 41px;
@@ -383,8 +321,6 @@
     margin-bottom: 14px;
   }
 
-
-
   .exemplar__title {
     padding-bottom: 145px;
     padding-top: 0;
@@ -398,6 +334,7 @@
 
   .exemplar__picture {
     margin-top: -40px;
+    margin-left: -55px;
   }
 
   .exemplar__after {
@@ -405,15 +342,15 @@
     padding-top: 20px;
   }
 
-  .exemplar__radio {
+  .exemplar__btns {
     margin: 0;
     display: flex;
     width: 615px;
 
     position: absolute;
 
-    bottom: 63px;
-    left: 30px;
+    bottom: -1px;
+    left: 12px;
 
     .after {
       margin-left: auto;
@@ -426,5 +363,9 @@
 
       padding-left: 40px;
     }
+  }
+
+  .exemplar__btn-result.exemplar__btn-result--before {
+    padding-right: 468px;
   }
 }

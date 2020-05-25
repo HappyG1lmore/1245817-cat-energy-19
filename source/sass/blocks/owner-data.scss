@@ -11,6 +11,7 @@
   width: 210px;
 
   position: relative;
+  display: block;
 }
 
 .owner-data__item.owner-data__item--email,
@@ -77,18 +78,19 @@
     padding-bottom: 70px;
 
     padding: 0 15px;
+    width: 590px;
   }
 
   .owner-data__item.owner-data__item--email,
   .owner-data__item.owner-data__item--phone {
   padding-bottom: 20px;
-}
+  }
 
-.owner-data {
+  .owner-data {
   padding-bottom: 36px;
-}
+  }
 
-.owner-data__legend {
+  .owner-data__legend {
   width: max-content;
 
   margin: 0;
@@ -98,28 +100,39 @@
   padding-left: 36px;
   padding-right: 38px;
   padding-bottom: 75px;
-}
+  }
 
-.owner-data__legend::after {
+  .owner-data__legend::after {
   content: "";
   border: solid 2px $green;
   position: absolute;
   top: 20px;
-  left: -60%;
-  width: 150vw;
+  left: 0;
+  width: 100vw;
 
   z-index: -1;
-}
+  }
 
-.owner-data__icon.owner-data__icon--phone {
+  .owner-data__legend::before {
+    content: "";
+    border: solid 2px $green;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100vw;
+
+    z-index: -1;
+    }
+
+  .owner-data__icon.owner-data__icon--phone {
   top: 18px;
   right: 14px;
-}
+  }
 
-.owner-data__icon.owner-data__icon--email {
+  .owner-data__icon.owner-data__icon--email {
   right: 16px;
   top: 15px;
-}
+  }
 
 }
 
@@ -141,6 +154,7 @@
   }
 
   .owner-data__legend {
+    width: 590px;
 
     margin-left: -37px;
     margin-top: -3px;

@@ -1,8 +1,8 @@
 .find-us {
-  width: 320px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .find-us__wrapper {
@@ -10,6 +10,10 @@
   flex-direction: column;
   align-items: center;
   width: 320px;
+
+  margin: 0 auto;
+  padding-right: 16px;
+
 }
 
 .find-us__invite {
@@ -32,6 +36,15 @@
 
 .find-us__map {
   height: 365px;
+  width: 100vw;
+
+  display: flex;
+
+  .map__img {
+    width: 100vw;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .find-us__info-wrap {
@@ -39,7 +52,7 @@
   width: 280px;
 }
 
-.find-us__info-wrap.catalog {
+.find-us__info-wrap.find-us__info-wrap--catalog {
   padding: 0px;
   margin-top: -3px;
 }
@@ -48,15 +61,16 @@
 
 @media (min-width: $tablet-width) {
   .find-us {
-    width: 768px;
-
-    padding-bottom: 66px;
+    width: 100vw;
+    display: flex;
   }
 
   .find-us__wrapper {
     width: 708px;
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 31px;
   }
 
   .find-us__info-wrap {
@@ -65,7 +79,7 @@
     margin: 0 auto;
   }
 
-  .find-us__info-wrap.catalog {
+  .find-us__info-wrap.find-us__info-wrap--catalog {
     padding-top: 37px;
   }
 
@@ -75,6 +89,17 @@
     line-height: 25px;
 
     padding-top: 29px;
+  }
+
+  .find-us__map {
+    height: 400px;
+    width: 100vw;
+
+    display: flex;
+
+    .map__img {
+      margin: 0 auto;
+    }
   }
 
   .find-us__adress {
@@ -97,13 +122,15 @@
 
 @media (min-width: $desktop-width) {
   .find-us {
-    width: 1300px;
+    width: 100vw;
     height: 400px;
   }
 
   .find-us__wrapper {
     width: 1220px;
     position: relative;
+
+    margin: 0 auto;
   }
 
   .find-us__info {
@@ -112,7 +139,7 @@
     height: 201px;
     background-color: white;
     top: 100px;
-    left: 0;
+    left: -10px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -122,8 +149,9 @@
     height: 75px;
   }
 
-  .find-us__info-wrap.catalog {
-    padding-top: 0;
+  .find-us__info-wrap.find-us__info-wrap--catalog {
+    padding-top: 4px;
+    padding-left: 10px;
   }
 
   .find-us__invite {
@@ -138,5 +166,13 @@
 
     margin-right: -13px;
     margin-top: 10px;
+  }
+
+  .find-us__adress.find-us__adress--catalog {
+    margin-right: -24px;
+  }
+
+  .find-us__map {
+    width: 100vw;
   }
 }

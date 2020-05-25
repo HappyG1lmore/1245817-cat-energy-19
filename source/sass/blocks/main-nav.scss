@@ -61,14 +61,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    .site-list__item {
-      padding-right: 35px;
-    }
-
-    .site-list__item:last-child {
-      padding-right: 0;
-    }
   }
 
   .main-nav__button {

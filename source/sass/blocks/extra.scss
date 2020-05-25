@@ -9,6 +9,7 @@
   width: max-content;
 
   position: relative;
+  display: block;
 }
 
 .extra__legend::after {
@@ -108,6 +109,8 @@
     padding-right: 38px;
     padding-bottom: 22px;
     margin-left: -35px;
+
+    width: 290px;
   }
 
   .extra__legend::after {
@@ -115,8 +118,19 @@
     border: solid 2px $green;
     position: absolute;
     top: 20px;
-    left: -160%;
-    width: 150vw;
+    left: 0;
+    width: 100vw;
+
+    z-index: -1;
+  }
+
+  .extra__legend::before {
+    content: "";
+    border: solid 2px $green;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100vw;
 
     z-index: -1;
   }

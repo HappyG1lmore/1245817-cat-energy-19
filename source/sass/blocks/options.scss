@@ -19,10 +19,14 @@
 }
 
 .options__input {
+  display: block;
+  position: absolute;
+
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  position: absolute;
+   -ms-appearance: none;
+    -o-appearance: none;
+       appearance: none;
 }
 
 .options__label {

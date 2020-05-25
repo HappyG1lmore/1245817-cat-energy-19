@@ -11,6 +11,11 @@
   opacity: 0.3;
 }
 
+.social__item.social__item--insta {
+  margin-right: 39px;
+  margin-left: 38px;
+}
+
 @media (min-width: $tablet-width) {
   .social__link.social__link--vk svg{
     width: 30px;

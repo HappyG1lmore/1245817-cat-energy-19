@@ -10,6 +10,14 @@
 .page-main__product-list {
   @include list-reset;
 
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
   a {
     @include title-small;
     line-height: 20px;
@@ -63,16 +71,6 @@
   bottom: 0;
   left: -5px;
   width: 112.5%;
-}
-
-.page-main__product-list {
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: relative;
 }
 
 @media (min-width: $tablet-width) {
@@ -155,7 +153,6 @@
   .page-main__background::after {
     content: "";
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: none;
     background-size: contain;
     background-repeat: no-repeat;
     width: 57%;

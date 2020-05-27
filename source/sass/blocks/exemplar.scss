@@ -67,7 +67,6 @@
   width: 311px;
   height: 232px;
   margin-bottom: 52px;
-
 }
 
 .exemplar__btns-wrap {
@@ -78,26 +77,29 @@
 
 .exemplar__btns {
   margin: 0;
-  display: block;
+  display: flex;
 
   position: absolute;
 
   bottom: 31px;
   left: 48px;
 
-  button {
-  border:none;
-  background: none;
+  width: 210px;
 
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
+  button {
+    border: none;
+    background: none;
+    font-family: $font-one;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 }
 
-.exemplar__btn-result.exemplar__btn-result--before {
-  padding-right: 111px;
+.exemplar__btn-result.exemplar__btn-result--after {
+  margin-left: auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -156,22 +158,15 @@
     width: 680px;
   }
 
-  .exemplar__result {
-    margin: 0;
-    padding-left: 15px;
-  }
-
   .exemplar__expenses {
     font-size: 20px;
     line-height: 20px;
-    text-align: start;
+    text-align: right;
     margin-left: auto;
     margin-top: -5px;
     margin-right: 10px;
 
     width: 175px;
-
-    text-align: right;
 
     span {
       display: inline-block;
@@ -188,30 +183,27 @@
   .exemplar__result {
     display: flex;
     justify-content: flex-start;
-    width: 367px;
-  }
 
-  .exemplar__total {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0;
+    padding-left: 15px;
+    width: 367px;
   }
 
   .exemplar__picture {
     width: 660px;
     height: 500px;
     margin-bottom: 19px;
-
+    margin-left: -15px;
   }
 
   .exemplar__after {
+    span {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 400;
+    }
 
-    span{
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-
-  width: 570px;
+    width: 570px;
     margin-left: auto;
     margin-right: auto;
 
@@ -222,24 +214,25 @@
   .exemplar__btns-wrap {
     position: relative;
     width: 650px;
-    margin-left: 66px;
     margin: 0 auto;
-   }
+  }
 
   .exemplar__btns {
     bottom: -1px;
-    left: 38px;
+    left: 25px;
+
+    width: 582px;
 
     button {
       font-size: 20px;
       line-height: 20px;
       font-weight: 400;
       text-transform: uppercase;
-      }
+    }
   }
 
-  .exemplar__btn-result.exemplar__btn-result--before {
-    padding-right: 464px;
+  .exemplar__btn-result.exemplar__btn-result--after {
+    margin-left: auto;
   }
 }
 
@@ -283,10 +276,6 @@
     flex-direction: column;
 
     padding-left: 41px;
-  }
-
-  .exemplar__btns-wrap {
-   width: 650px;
   }
 
   .exemplar__total {
@@ -365,7 +354,7 @@
     }
   }
 
-  .exemplar__btn-result.exemplar__btn-result--before {
-    padding-right: 468px;
+  .exemplar__btn-result.exemplar__btn-result--after {
+    margin-left: auto;
   }
 }

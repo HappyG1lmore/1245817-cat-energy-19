@@ -139,7 +139,7 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 65px
+  top: 65px;
 }
 
 @media (min-width: $tablet-width) {
@@ -291,7 +291,7 @@
   .additional__banner::before {
     content: "";
     left: 89px;
-    top: 65px
+    top: 65px;
   }
 }
 
@@ -412,6 +412,6 @@
   .additional__banner::before {
     content: "";
     left: 93px;
-    top: 65px
+    top: 65px;
   }
 }

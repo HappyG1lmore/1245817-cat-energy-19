@@ -49,7 +49,7 @@
   height: 15px;
   position: absolute;
   right: -37px;
-  top:18px;
+  top: 18px;
 }
 
 .type-feed__item {
@@ -91,11 +91,9 @@
 
   margin-top: 17px;
   margin-left: 2px;
-
 }
 
 .type-feed__cat-slim {
-  height: 50px;
   position: absolute;
 
   width: 35px;
@@ -158,7 +156,6 @@
 
     margin-bottom: 30px;
     margin-top: -3px;
-
   }
 
   .type-feed__item.type-feed__item--mass-gain {
@@ -205,14 +202,14 @@
   }
 
   .type-feed__cat-slim {
-   width: 140px;
-   height: 194px;
+    width: 140px;
+    height: 194px;
 
-   left: 476px;
-   top: 80px;
+    left: 476px;
+    top: 80px;
 
-   position: absolute;
-   z-index: 1;
+    position: absolute;
+    z-index: 1;
   }
 
   .type-feed__cat-pro {
@@ -223,7 +220,7 @@
 
     position: absolute;
     z-index: 1;
-   }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -242,8 +239,9 @@
   .type-feed__title {
     @include title-top;
     line-height: 37, 02;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: 62px;
+    margin-top: 2px;
 
     padding-top: 65px;
     padding-bottom: 65px;
@@ -276,12 +274,6 @@
     width: 708px;
   }
 
-
-  .type-feed__title {
-    margin-left: 62px;
-    margin-top: 2px;
-  }
-
   .type-feed__title.type-feed__title--mass-gain {
     padding-top: 65px;
   }
@@ -298,7 +290,7 @@
   }
 
   .type-feed__circle {
-   position: static;
+    position: static;
     width: 100px;
     height: 100px;
 
@@ -312,13 +304,13 @@
   }
 
   .type-feed__cat-slim {
-   width: 70px;
-   height: 97px;
+    width: 70px;
+    height: 97px;
 
-   left: 66px;
-   top: 40px;
+    left: 66px;
+    top: 40px;
 
-   position: absolute;
+    position: absolute;
   }
 
   .type-feed__cat-pro {
@@ -329,5 +321,5 @@
     top: 68px;
 
     position: absolute;
-   }
+  }
 }

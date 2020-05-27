@@ -1,4 +1,4 @@
-  .map__img {
+.map__img {
   width: 320px;
   height: 365px;
 }
@@ -10,9 +10,9 @@
     width: 767px;
     height: 400px;
   }
- }
+}
 
- @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
   .map__img {
     background-size: 767px 400px;
 
@@ -21,4 +21,4 @@
 
     margin-top: 0;
   }
- }
+}

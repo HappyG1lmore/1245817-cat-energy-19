@@ -85,12 +85,12 @@
 
   .advanages__item:nth-child(1),
   .advanages__item:nth-child(3) {
-  margin-right: 169px;
+    margin-right: 169px;
   }
 
   .advanages__item:nth-child(3),
   .advanages__item:nth-child(4) {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .advantages__title {
@@ -149,8 +149,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-
 }
 
 @media (min-width: $desktop-width) {

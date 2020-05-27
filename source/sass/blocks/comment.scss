@@ -17,11 +17,15 @@
 }
 
 .comment__text {
+
   width: 280px;
   padding: 13px;
 }
 
 .comment__text.comment__text--textarea {
+  font-family: $font-one;
+  line-height: 30px;
+
   padding: 15px 13px;
 
   opacity: 0.5;
@@ -32,7 +36,7 @@
   opacity: 1;
 }
 
-.comment__text.comment__text--textarea:focus  {
+.comment__text.comment__text--textarea:focus {
   opacity: 1;
   color: black;
 
@@ -95,6 +99,8 @@
   }
 
   .comment__text.comment__text--textarea {
+
+
     padding: 10px 19px;
     height: 175px;
   }

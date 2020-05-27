@@ -26,7 +26,6 @@
 
   width: 17px;
   height: 13px;
-  position: absolute;
   top: 14px;
   right: 16px;
 }
@@ -38,7 +37,6 @@
 
   width: 20px;
   height: 20px;
-  position: absolute;
   top: 12px;
   right: 13px;
 }
@@ -75,42 +73,37 @@
     @include title-middle-tab;
     line-height: 36px;
 
-    padding-bottom: 70px;
-
     padding: 0 15px;
-    width: 590px;
+
+    width: max-content;
+
+    margin: 0;
+    margin-left: -35px;
+    margin-top: -3px;
+
+    padding-left: 36px;
+    padding-right: 38px;
+    padding-bottom: 75px;
   }
 
   .owner-data__item.owner-data__item--email,
   .owner-data__item.owner-data__item--phone {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .owner-data {
-  padding-bottom: 36px;
-  }
-
-  .owner-data__legend {
-  width: max-content;
-
-  margin: 0;
-  margin-left: -35px;
-  margin-top: -3px;
-
-  padding-left: 36px;
-  padding-right: 38px;
-  padding-bottom: 75px;
+    padding-bottom: 16px;
   }
 
   .owner-data__legend::after {
-  content: "";
-  border: solid 2px $green;
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100vw;
+    content: "";
+    border: solid 2px $green;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100vw;
 
-  z-index: -1;
+    z-index: -1;
   }
 
   .owner-data__legend::before {
@@ -122,18 +115,17 @@
     width: 100vw;
 
     z-index: -1;
-    }
+  }
 
   .owner-data__icon.owner-data__icon--phone {
-  top: 18px;
-  right: 14px;
+    top: 18px;
+    right: 14px;
   }
 
   .owner-data__icon.owner-data__icon--email {
-  right: 16px;
-  top: 15px;
+    right: 16px;
+    top: 15px;
   }
-
 }
 
 @media (min-width: $desktop-width) {

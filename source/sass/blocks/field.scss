@@ -1,26 +1,25 @@
 .field {
+  font-family: $font-one;
+  line-height: 30px;
+  flex-grow: 1;
+
   padding: 15px 13px;
 
   opacity: 0.5;
-  height: 150px;
+  height: 46px;
 }
 
 .field:hover {
   opacity: 1;
 }
 
-.field {
-  flex-grow: 1;
-  height: 46px;
-}
-
 .field [type="number"] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .field::-webkit-outer-spin-button,
 .field::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .field:focus {

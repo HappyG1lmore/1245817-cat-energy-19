@@ -1,13 +1,19 @@
 .form__button {
   border: none;
+  font-family: $font-one;
+  line-height: 20px;
+  font-size: 16px;
 }
 
 .form__discription {
   @include text-all;
+  font-family: $font-two;
   text-transform: none;
 
   display: flex;
   justify-content: center;
+
+  padding-top: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -21,6 +27,9 @@
     margin-left: 2px;
     height: 52px;
     width: 283px;
+
+    line-height: 20px;
+    font-size: 20px;
   }
 
   .form__options {
@@ -32,6 +41,8 @@
     font-size: 16px;
     line-height: 16px;
     font-family: $font-two;
+
+    padding-bottom: 16px;
   }
 }
 

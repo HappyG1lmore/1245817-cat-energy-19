@@ -53,14 +53,14 @@
   height: 38px;
   margin-bottom: 5px;
   margin-right: 1px;
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+.page-header__logo-link.page-header__logo-link--click:hover {
+  opacity: 0.8;
+}
 
-  &:active {
-    opacity: 0.6;
-  }
+.page-header__logo-link.page-header__logo-link--click:active {
+  opacity: 0.6;
 }
 
 

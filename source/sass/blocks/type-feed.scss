@@ -30,6 +30,7 @@
 }
 
 .type-feed__link-catalog {
+  font-family: $font-one;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
@@ -51,6 +52,24 @@
   right: -37px;
   top: 18px;
 }
+
+.type-feed__link-catalog:hover::before {
+  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' width='34px' height='14px' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 11' style='enable-background:new 0 0 32 11;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0 %7B fill: %233F4242; %7D %3C/style%3E%3Cpolygon class='st0' points='25.4,0 32,5.5 25.4,11 25.4,6.6 0,6.6 0,4.4 25.4,4.4 '/%3E%3C/svg%3E%0A");
+
+  width: 35px;
+  height: 15px;
+
+  top: -1px;
+  right: -60px;
+
+  cursor: pointer;
+}
+
+.type-feed__link-catalog:active,
+.type-feed__link-catalog:active::before {
+  opacity: 0.3;
+}
+
 
 .type-feed__item {
   background-color: $color-back;

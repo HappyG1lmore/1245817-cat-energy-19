@@ -5,6 +5,7 @@
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
+
 }
 
 .page-main__product-list {
@@ -126,11 +127,13 @@
   .page-main {
     width: 1300px;
     margin: auto;
-    position: relative;
+    margin-bottom: 1px;
+
   }
 
   .page-main__wrapper {
     width: 1220px;
+    padding-bottom: 1px;
   }
 
   .page-main__wrapper.page-main__wrapper--catalog {
@@ -139,8 +142,9 @@
 
   .page-main__background {
     background-image: none;
-    width: 1220px;
+    width: 100vw;
     height: 700px;
+
   }
 
   .page-main__wrapper.page-main__wrapper--catalog .page-main__title {
@@ -153,13 +157,15 @@
   .page-main__background::after {
     content: "";
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-size: contain;
+    background-size: auto 630px;
     background-repeat: no-repeat;
-    width: 57%;
-    height: 700px;
+    background-position: right;
+    background-color: #64a83b;
+    width: 50%;
+    height: 630px;
     position: absolute;
-    right: -86px;
-    top: -130px;
+    right: 0;
+    top: 0;
     z-index: -2;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

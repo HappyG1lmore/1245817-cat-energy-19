@@ -34,7 +34,8 @@
 
 .banner__buttom {
   text-align: center;
-  width: 280px;
+
+
 }
 
 .banner__button-wrap {
@@ -46,13 +47,14 @@
     color: white;
   }
 
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
   &:active .banner__button {
     opacity: 0.3;
   }
+}
+
+.banner__button-wrap:hover {
+  background-color: #5eaa2f;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
@@ -121,12 +123,11 @@
 
 @media (min-width: $desktop-width) {
   .banner {
-    width: 1300px;
+    width: 100%;
     margin-left: 7%;
     margin-bottom: 0;
     height: auto;
 
-    position: relative;
   }
 
   .banner__title {
@@ -140,10 +141,14 @@
     margin-left: -5px;
   }
 
+  .banner__image {
+    position: relative;
+  }
+
   .banner__picture {
     position: absolute;
-    right: 219px;
-    top: 63px;
+    right: 200px;
+    top: -300px;
     z-index: 1;
 
     width: 550px;

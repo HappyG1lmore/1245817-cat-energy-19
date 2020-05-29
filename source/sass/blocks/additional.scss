@@ -99,6 +99,14 @@
   margin-top: 1px;
 }
 
+.additional__button:hover {
+  background-color: #5eaa2f;
+}
+
+.additional__button:active span {
+  opacity: 0.3;
+}
+
 .additional__banner {
   display: flex;
   justify-content: center;
@@ -173,9 +181,9 @@
     content: "";
     border: solid 2px $green;
     position: absolute;
-    bottom: 90px;
-    left: -200%;
-    width: 100vw;
+    bottom: 91px;
+    left: -500%;
+    width: 1000%;
 
     z-index: -1;
   }
@@ -264,7 +272,7 @@
     width: 708px;
     height: 200px;
 
-    margin-top: 67px;
+    margin-top: 68px;
 
     justify-content: flex-start;
 
@@ -378,10 +386,11 @@
   }
 
   .additional__title::before {
-    left: -500%;
+
     top: 21px;
-    width: 100vw;
     z-index: -1;
+    left: -500%;
+    width: 1000%;
   }
 
   .additional-item__title {

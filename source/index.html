@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cat energy - функциональное питание для котов</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="css/normalize.css" rel="stylesheet" />
   <link href="css/style.min.css" rel="stylesheet">
   <script src="js/picturefill.js"></script>
@@ -18,11 +17,11 @@
         <a class="page-header__logo-link">
           <div class="page-header__logo"></div>
         </a>
-        <button class="main-nav__button" type="button"><span class="visuallyhidden">Открыть меню</span></button>
+        <button class="main-nav__button main-nav__button--btn" type="button"><span class="visuallyhidden">Открыть меню</span></button>
       </div>
 
-      <nav class="main-nav__btns">
-        <ul class="main-nav__list site-list">
+      <nav class="site-list">
+        <ul class="site-list__btns">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link active">Главная</a>
           </li>
@@ -46,12 +45,15 @@
           Занялся собой? Займись котом!
         </p>
         <div class="button banner__button-wrap">
-          <a href="#" class="banner__button"> Подобрать программу </a>
+          <a href="form.html" class="banner__button"> Подобрать программу </a>
         </div>
         <div class="banner__image">
           <picture>
-            <source media="(min-width: 1300px)"
-              srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source type=image/webp media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type=image/webp media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type=image/webp srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="banner__picture" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"
               alt="фотография банки с кормом">
@@ -104,7 +106,7 @@
               необходимые мышцы!
             </p>
             <div class="type-feed__link-catalog">
-              <a class="type-feed__link--pro" href="catalog.html">Каталог Pro</a></div>
+              <a class="type-feed__link-pro" href="catalog.html">Каталог Pro</a></div>
           </div>
         </div>
       </section>
@@ -112,43 +114,51 @@
       <section class="advantages">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
-          <li class="advanages__item advanages__item--benefit">
-            <div class="advanages__icon advanages__icon1">
+          <li class="advantages__item advantages__item--benefit">
+            <div class="advantages__icon advantages__icon1">
               <picture>
-                <img class="advanages__img" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x"
+                <source type=image/webp srcset="img/advantage-leaf@1x.webp 1x, img/advantage-leaf@2x.webp 2x">
+
+                <img class="advantages__img" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x"
                   alt="иконка с листиком белого цвета на зеленом фоне">
               </picture>
             </div>
-            <div class="advanages__item-wrap">Функциональное питание содержит только полезные питательные вещества.
+            <div class="advantages__item-wrap">Функциональное питание содержит только полезные питательные вещества.
             </div>
           </li>
-          <li class="advanages__item advanages__item--easy">
-            <div class="advanages__icon advanages__icon2">
+          <li class="advantages__item advantages__item--easy">
+            <div class="advantages__icon advantages__icon2">
               <picture>
-                <img class="advanages__img" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x"
+                <source type=image/webp srcset="img/advantage-powder@1x.webp 1x, img/advantage-powder@2x.webp 2x">
+
+                <img class="advantages__img" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x"
                   alt="иконка с листиком белого цвета на зеленом фоне">
               </picture>
             </div>
-            <div class="advanages__item-wrap">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            <div class="advantages__item-wrap">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </div>
           </li>
-          <li class="advanages__item advanages__item--conveniently">
-            <div class="advanages__icon advanages__icon3">
+          <li class="advantages__item advantages__item--conveniently">
+            <div class="advantages__icon advantages__icon3">
               <picture>
-                <img class="advanages__img" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x"
+                <source type=image/webp srcset="img/advantage-dining@1x.webp 1x, img/advantage-dining@2x.webp 2x">
+
+                <img class="advantages__img" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x"
                   alt="иконка с листиком белого цвета на зеленом фоне">
               </picture>
             </div>
-            <div class="advanages__item-wrap">Замените один-два приема обычной еды на наше функциональное питание.</div>
+            <div class="advantages__item-wrap">Замените один-два приема обычной еды на наше функциональное питание.</div>
           </li>
-          <li class="advanages__item advanages__item--fast">
-            <div class="advanages__icon advanages__icon4">
+          <li class="advantages__item advantages__item--fast">
+            <div class="advantages__icon advantages__icon4">
               <picture>
-                <img class="advanages__img" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x"
+                <source type=image/webp srcset="img/advantage-clock@1x.webp 1x, img/advantage-clock@2x.webp 2x">
+
+                <img class="advantages__img" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x"
                   alt="иконка с листиком белого цвета на зеленом фоне">
               </picture>
             </div>
-            <div class="advanages__item-wrap">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
+            <div class="advantages__item-wrap">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </div>
           </li>
         </ul>
@@ -187,6 +197,10 @@
         <button class="exemplar__btn-result exemplar__btn-result--after">Стало</button>
       </div>
       <picture>
+        <source type=image/webp media="(min-width: 1300px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+        <source type=image/webp media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+        <source type=image/webp srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
         <source media="(min-width: 1300px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
         <img class="exemplar__picture exemplar__picture--before" src="img/before-mobile@1x.png"
@@ -216,7 +230,7 @@
         </div>
       </div>
     </div>
-    <div class="find-us__map">
+    <div class="find-us__map map">
       <iframe class="map__img"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533116!2d30.32085871647132!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1589963383278!5m2!1sru!2sby"
         width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">

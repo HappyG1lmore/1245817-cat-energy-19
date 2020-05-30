@@ -29,9 +29,6 @@
   width: 275px;
 }
 
-.exemplar__info-wrap {
-  margin-left: -9px;
-}
 
 .exemplar__result {
   display: flex;
@@ -77,6 +74,7 @@
 
 .exemplar__btns {
   margin: 0;
+  padding-left: 10px;
   display: flex;
 
   position: absolute;
@@ -84,7 +82,7 @@
   bottom: 31px;
   left: 48px;
 
-  width: 210px;
+  width: 220px;
 
   button {
     border: none;
@@ -164,7 +162,6 @@
     text-align: right;
     margin-left: auto;
     margin-top: -5px;
-    margin-right: 10px;
 
     width: 175px;
 
@@ -221,7 +218,7 @@
     bottom: -1px;
     left: 25px;
 
-    width: 582px;
+    width: 590px;
 
     button {
       font-size: 20px;
@@ -261,7 +258,7 @@
     display: flex;
 
     padding-bottom: 65px;
-    margin-right: 183px;
+    margin-right: 200px;
   }
 
   .exemplar__btns-wrap {
@@ -295,7 +292,7 @@
 
     span {
       display: inline-block;
-      margin-left: 59px;
+      margin-left: 61px;
       margin-top: 0;
       width: 90px;
     }
@@ -334,12 +331,12 @@
   .exemplar__btns {
     margin: 0;
     display: flex;
-    width: 615px;
+    width: 590px;
 
     position: absolute;
 
-    bottom: -1px;
-    left: 12px;
+    bottom: 0;
+    left: 0;
 
     .after {
       margin-left: auto;

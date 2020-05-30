@@ -8,11 +8,10 @@
 .find-us__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 320px;
+
+  width: 319px;
 
   margin: 0 auto;
-  padding-right: 16px;
 }
 
 .find-us__invite {
@@ -44,6 +43,10 @@
     margin: 0 auto;
     display: block;
   }
+}
+
+.find-us__info {
+  margin: 0 auto;
 }
 
 .find-us__info-wrap {
@@ -135,15 +138,15 @@
     width: 570px;
     height: 201px;
     background-color: white;
-    top: 100px;
-    left: -10px;
+    top: 95px;
+    left: 2px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
   .find-us__info-wrap {
-    width: 405px;
-    height: 75px;
+    width: 425px;
+    height: 100px;
   }
 
   .find-us__info-wrap.find-us__info-wrap--catalog {
@@ -153,16 +156,15 @@
 
   .find-us__invite {
     padding: 0;
-    margin-top: 11px;
-    margin-left: -6px;
+    margin-top: 15px;
   }
 
   .find-us__adress {
     padding: 0;
     text-align: start;
 
-    margin-right: -13px;
-    margin-top: 10px;
+    margin-left: auto;
+    margin-top: 14px;
   }
 
   .find-us__adress.find-us__adress--catalog {

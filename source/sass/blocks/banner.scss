@@ -127,18 +127,15 @@
     margin-left: 7%;
     margin-bottom: 0;
     height: auto;
-
   }
 
   .banner__title {
     padding-top: 92px;
-    padding-left: 0;
-    margin-left: -5px;
+    padding-left: 30px;
   }
 
   .banner__text {
-    padding-left: 0;
-    margin-left: -5px;
+    padding-left: 30px;
   }
 
   .banner__image {
@@ -148,7 +145,7 @@
   .banner__picture {
     position: absolute;
     right: 200px;
-    top: -300px;
+    top: -287px;
     z-index: 1;
 
     width: 550px;
@@ -157,7 +154,8 @@
 
   .banner__button-wrap {
     height: 52px;
-    margin-left: -5px;
     margin-top: 5px;
+
+    margin-left: 30px;
   }
 }

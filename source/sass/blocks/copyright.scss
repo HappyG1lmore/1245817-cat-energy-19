@@ -13,26 +13,23 @@
 }
 
 .copyright__logo {
-  width: 35px;
+  width: 40px;
   height: 45px;
+  margin-right: -5px;
+  padding-top: 2px;
 
-  path {
-    fill: #666666;
-  }
-
-  &:hover {
-    path {
-      fill: #68b738;
-    }
-  }
-
-  &:active {
-    path {
-      fill: #68b738;
-      opacity: 0.3;
-    }
-  }
+  fill: #666666;
 }
+
+.copyright__logo:hover {
+  fill: #68b738;
+}
+
+.copyright__logo:active {
+  fill: #68b738;
+  opacity: 0.3;
+}
+
 
 @media (min-width: $tablet-width) {
   .copyright__text {
